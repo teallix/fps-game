@@ -135,6 +135,7 @@ sickle = loadSprite('images/sickle.png', block_s, block_s)
 baseballbat = loadSprite('images/baseballbat.png', block_s, block_s)
 
 differ = loadSprite('images/differ.png', block_s, block_s)
+stim = loadSprite('images/stim.png', block_s, block_s)
 
 def loadMap(path):
     wall_coords = []
