@@ -124,6 +124,18 @@ incerator = loadSprite('images/incerator.png', block_s, block_s)
 loner = loadSprite('images/loner.png', block_s, block_s)
 p90 = loadSprite('images/p90.png', block_s, block_s)
 
+asval = loadSprite('images/asval.png', block_s, block_s)
+g890 = loadSprite('images/g890.png', block_s, block_s)
+pkm = loadSprite('images/pkm.png', block_s, block_s)
+december = loadSprite('images/december.png', block_s, block_s)
+
+spr308 = loadSprite('images/spr308.png', block_s, block_s)
+victor = loadSprite('images/victor.png', block_s, block_s)
+sickle = loadSprite('images/sickle.png', block_s, block_s)
+baseballbat = loadSprite('images/baseballbat.png', block_s, block_s)
+
+differ = loadSprite('images/differ.png', block_s, block_s)
+
 def loadMap(path):
     wall_coords = []
     enemy_coords = []
