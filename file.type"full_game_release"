@@ -119,6 +119,11 @@ acorder = loadSprite('images/acorder.png', block_s, block_s)
 hammerandsickle = loadSprite('images/hammerandsickle.png', block_s, block_s)
 famas = loadSprite('images/famas.png', block_s, block_s)
 
+winder = loadSprite('images/winder.png', block_s, block_s)
+incerator = loadSprite('images/incerator.png', block_s, block_s)
+loner = loadSprite('images/loner.png', block_s, block_s)
+p90 = loadSprite('images/p90.png', block_s, block_s)
+
 def loadMap(path):
     wall_coords = []
     enemy_coords = []
