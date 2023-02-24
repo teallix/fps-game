@@ -136,6 +136,12 @@ baseballbat = loadSprite('images/baseballbat.png', block_s, block_s)
 
 differ = loadSprite('images/differ.png', block_s, block_s)
 stim = loadSprite('images/stim.png', block_s, block_s)
+stun = loadSprite('images/stun.png', block_s, block_s)
+flash = loadSprite('images/flash.png', block_s, block_s)
+
+mine = loadSprite('images/mine.png', block_s, block_s)
+claymore = loadSprite('images/clayore.png', block_s, block_s)
+throwingknife = loadSprite('images/throwingknife.png', block_s, block_s)
 
 def loadMap(path):
     wall_coords = []
