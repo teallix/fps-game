@@ -2,14 +2,14 @@
 
 import time
 
-def main():
+def lkjp():
     name = input("your name?\n")
     
     print("well, " +name+ " this is a test, are you ready?")
     
-    introScene()
+    introg()
     
-def introScene():
+def introg():
     userInput = ""
     userInput = input()
     if userInput == "yes":
@@ -21,7 +21,7 @@ def introScene():
         time.sleep(3)
         print("your choices are; Mw2, Bo2, Bo1, Infinite Warfare, Ghosts, Mw2 2022, Mw 2019, Cold War, or Bo3")
         time.sleep(2)
-        bn()
+        bnh()
         
     elif userInput == "no":
         print("ok then, that's it i guess")
@@ -33,7 +33,7 @@ def introScene():
         time.sleep(2)
         introScene()
         
-def bn():
+def bnh():
     userInput = ""
     userInput = input()
     if userInput == "Mw2":
@@ -165,7 +165,7 @@ def gt():
         
         
       
-def different():
+def gtr():
     userInput = ""
     print("choose from: matrix, or dog")
     userInput = input()
