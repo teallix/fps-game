@@ -1,7 +1,4 @@
-# teal
-# This is a private server
-# Anyone who has a copy of this is not entitled to it
-# If you have this
-# Delete it
-# Along with the codespace
-# now
+# fps-game
+# this is a beta for a fps game
+# there are different versions of it
+# the only one you cab use is file.type"full game release"
