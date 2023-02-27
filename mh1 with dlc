@@ -200,7 +200,7 @@ def introScene():
        lines()
        
    elif userInput == "enable dlc":
-       ljkp()
+       lkjp()
 
    else:
      print("that is wrong")
