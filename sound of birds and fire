@@ -16,6 +16,16 @@ def audio():
     playsound(audio1)
     time.sleep(1)
     playsound(audio2)
+    
+def playsound(audio2):
+    playsound(audio2)
+    play(file.type(mixkit-birds-chirping-near-water.wav))
+    
+def playsound(audio1):
+    playsound(audio1)
+    play(file.type(mixkit-fire-crackling.wav))
    
 pygame1()
 pygame2()
+playsound(audio1)
+playsound(audio2)
