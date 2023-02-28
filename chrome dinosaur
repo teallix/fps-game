@@ -1,0 +1,21 @@
+import time
+
+
+def pygame1():
+    playsound(audio)
+    play(file.type(mixkit-birds-chirping-near-water.wav))
+
+def pygame2():
+    playsound(audio)
+    play(file.type(mixkit-fire-crackling.wav))
+   
+def playsound(audio):
+    playsound(audio)
+    
+def audio():
+    playsound(audio1)
+    time.sleep(1)
+    playsound(audio2)
+   
+pygame1()
+pygame2()
