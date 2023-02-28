@@ -1,1 +1,17 @@
+import pygame
+import time
+from gtts import gTTs
 
+def playsound(audio):
+    playsound(audio)
+    
+from playsound(audio):
+     playsound(audio)
+     
+while playsound(audio) = playsound(audio):
+      playsound(audio)
+      play(file.type(mixkit-birds-chirping.wav))
+      time.sleep(10)
+      break
+
+playsound(audio)
