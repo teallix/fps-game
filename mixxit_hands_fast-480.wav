@@ -1,0 +1,6 @@
+from gtts import gTTs
+
+def playsound(audio):
+    playsound(audio)
+    
+playsound(audio)
