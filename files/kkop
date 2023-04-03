@@ -1,0 +1,6 @@
+def main():
+    print("so, hello")
+    ya = input()
+    print("hello, " +ya+ ", hello")
+    
+main()

@@ -1,0 +1,65 @@
+import time
+
+def timesd():
+    name = ""
+    name = input("your name?...\n")
+    if name == "penis":
+        print("haha, not funny")
+        time.sleep(1.5)
+        timesd()
+    elif name == "rape":
+        print("haha not funny")
+        time.sleep(1.5)
+        timesd()
+        
+    elif name == "nigger":
+        print("not funny")
+        time.sleep(1.5)
+        timesd()
+        
+    elif name == "nigga":
+        print("not allowed")
+        time.sleep(1.5)
+        timesd()
+        
+    elif name == "vagina":
+        print("not allowed")
+        time.sleep(1.5)
+        timesd()
+    
+    elif name == "pussy":
+        print("not allowed")
+        time.sleep(1.5)
+        timesd()
+        
+    elif name == "furry":
+        print("kill yourself")
+        time.sleep(3)
+        quit()
+        
+    elif name == "fagot":
+        print("not allowed gay fuck")
+        time.sleep(3)
+        quit()
+        
+    elif name == "fuck":
+        print("fuck you")
+        time.sleep(3)
+        quit()
+        
+    else:
+        print("hello, " +name+ "")
+        time.sleep(2)
+        loops()
+        
+def loops():
+    print("1")
+    time.sleep(0.1)
+    loopss()
+    
+def loopss():
+    print("11")
+    time.sleep(0.1)
+    loops()
+    
+timesd()

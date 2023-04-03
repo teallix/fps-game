@@ -1,0 +1,393 @@
+import time
+# controls are: python, help, license, w, ^[[A, ^[[B, ^[[C, ^[[D, file, ss, l, source, ll, df, find, while, fps, tree, java, quit, go, and exit
+
+def lines():
+    userInput = ""
+    userInput = input("")
+    if userInput == "help":
+        print("help with what?")
+        helps()
+        
+    elif userInput == "python":
+        print("Python 3.10.4 (main, Dec 19 2022, 20:24:16) [GC 9.4.0] on Linux")
+        print("Type python, help, license, quit, w, ip, or exit for more information")
+        liner()
+        
+    elif userInput == "yes":
+        yess()
+    
+    elif userInput == "license":
+        print("MIT License\nCopyright (c) 2023 teallix\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the 'Software'), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.")
+        line()
+        
+    elif userInput == "w":
+        print(" 20:15:06 up 12 min,  0 users,  load average: 0.24, 0.58, 0.53\nUSER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT")
+        lines()
+    
+    elif userInput == "ip":
+        print("Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }\nip [ -force ] -batch filename\nwhere  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |\ntunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |\nnetns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |\nvrf | sr | nexthop }\nOPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |\n-h[uman-readable] | -iec | -j[son] | -p[retty] |\n-f[amily] { inet | inet6 | mpls | bridge | link } |\n-4 | -6 | -I | -D | -M | -B | -0 |\n-l[oops] { maximum-addr-flush-attempts } | -br[ief] |\n-o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |\n-rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |\n-c[olor]}")
+        lines()
+        
+    elif userInput == "^[[A":
+        lines()
+        
+    elif userInput == "^[[B":
+        lines()
+        
+    elif userInput == "name":
+        name()
+        
+    elif userInput == "^[[C":
+        lines()
+        
+    elif userInput == "^[[D":
+        lines()
+        
+    elif userInput == "df":
+        print("Filesystem     1K-blocks     Used Available Use% Mounted on\noverlay         32847680 12471652  18681928  41% /\ntmpfs              65536        0     65536   0% /dev\ntmpfs            2013272        0   2013272   0% /sys/fs/cgroup\nshm                65536        0     65536   0% /dev/shm\n/dev/sda1       30298176 21795184   8486608  72% /usr/sbin/docker-init\n/dev/sdb1       16401276      128  15546008   1% /tmp/dev/loop0      32847680 12471652  18681928  41% /workspaces")
+        line()
+        
+    elif userInput == "magicfiles":
+        print("[>magicfiles<]\nfile 'magicfiles' not availible for open\n{-magic-} + {-files-} = *error*\nteal/workspaces/files/ $")
+        line()
+        
+    elif userInput == "l":
+        print(" c++/  'cold war'/   dlc/   files/   fps/   li/   mh/   mods/   python/")
+        line()
+        
+    elif userInput == "fps":
+        print("noun\nnoun: first-person shooter; plural noun: first-person shooters; noun: FPS; plural noun: FPSs\na type of video game whose gameplay involves shooting enemies and other targets and in which a player views the action as though through the eyes of the character they are controlling.\n'blast through hordes of aliens in this sci-fi first-person shooter'")
+        lines()
+        
+    elif userInput == "time":
+        print("\nreal    0m0.003s\nuser    0m0.002s\nsys     0m0.001s")
+        line()
+        
+    elif userInput == "tree":
+        print(".\n├── c++\n│   └── c++\n├── cold war\n│   ├── camo\n│   ├── cold war default\n│   ├── cold war mods\n│   ├── dark aether\n│   ├── dark matter ultra\n│   ├── output\n│   │   └── output of vanguard\n│   ├── vangaurd\n│   └── weapons\n├── dlc\n│   └── cod test game\n├── files\n│   ├── a.out\n│   ├── chrome dinosaur\n│   ├── crash test\n│   ├── df\n|   ├── easier loop\n│   ├── fh1\n│   ├── foward\n│   ├── hacks\n│   ├── hack v2\n|   ├── infinity\n│   ├── kg\n│   ├── kkop\n│   ├── looops\n│   ├── loop\n│   ├── main\n│   ├── null\n│   ├── sound\n│   ├── termianl\n│   ├── test 2\n│   ├── test 5\n│   └── testing\n├── fps\n│   ├── file.type'full_game_release'\n│   └── file.type'skeleton'\n├── li\n   └── rm\n│       ├── LICENSE\n│       └── README.md\n├── magicfiles\n│   ├── cod_2023\n│   ├── empty terminal\n│   ├── fps\n│   └── name test\n├── mh\n│   └── mh1\n├── mods\n│   ├── mod\n│   ├── mod 10\n│   ├── mod 2\n│   ├── mod 3\n│   ├── mod 4\n│   ├── mod 5\n│   ├── mod 6\n│   ├── mod 7\n│   ├── mod 8\n│   └── mod 9\n└── python\n    ├── hi9\n    ├── mh1 dlc 2\n    └── python choices test\n12 directories, 53 files\n")
+        line()
+        
+    elif userInput == "ll":
+        print("total 52\ndrwxrwxrwx+ 13 codespace root      4096 Mar  6 14:58  ./\ndrwxr-xrwx+  5 codespace root      4096 Jan 19 17:30  ../\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 03:20  c++/\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  1 22:59 'cold war'/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:10  dlc/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 17:43  files/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:13  fps/\ndrwxrwxrwx+  8 codespace root      4096 Mar  3 01:28  .git/\\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  3 01:19  li/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:11  mh/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  1 21:44  mods/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 13:26  python/\ndrwxrwxrwx+  2 root      root      4096 Feb 23 19:40  .vscode/")
+        line()
+        
+    elif userInput == "file":
+        print("Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]\n[--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]\n[-m <magicfiles>] [-P <parameter=value>] <file> ...\nfile -C [-m <magicfiles>]\nfile [--help]")
+        lines()
+        
+    elif userInput == "while":
+        whiles()
+    
+    elif userInput == "exit":
+        quit()
+        
+    elif userInput == "quit":
+        quit()
+        
+    else:
+        line()
+    
+def line():
+    userInput = ""
+    userInput = input("")
+    if userInput == "help":
+        print("help with what?")
+        helps()
+        
+    elif userInput == "python":
+        print("Python 3.10.4 (main, Dec 19 2022, 20:24:16) [GC 9.4.0] on Linux")
+        print("Type python, help, license, quit, w, ip, or exit for more information")
+        liner()
+        
+    elif userInput == "w":
+        print(" 20:15:06 up 12 min,  0 users,  load average: 0.24, 0.58, 0.53\nUSER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT")
+        lines()
+
+    elif userInput == "license":
+        print("MIT License\nCopyright (c) 2023 teallix\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the 'Software'), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.")  
+        lines()
+        
+    elif userInput == "ip":
+        print("Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }\nip [ -force ] -batch filename\nwhere  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |\ntunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |\nnetns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |\nvrf | sr | nexthop }\nOPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |\n-h[uman-readable] | -iec | -j[son] | -p[retty] |\n-f[amily] { inet | inet6 | mpls | bridge | link } |\n-4 | -6 | -I | -D | -M | -B | -0 |\n-l[oops] { maximum-addr-flush-attempts } | -br[ief] |\n-o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |\n-rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |\n-c[olor]}")
+        lines()
+        
+    elif userInput == "fps":
+        print("noun\nnoun: first-person shooter; plural noun: first-person shooters; noun: FPS; plural noun: FPSs\na type of video game whose gameplay involves shooting enemies and other targets and in which a player views the action as though through the eyes of the character they are controlling.\n'blast through hordes of aliens in this sci-fi first-person shooter'")
+        lines()
+        
+    elif userInput == "tree":
+        print(".\n├── c++\n│   └── c++\n├── cold war\n│   ├── camo\n│   ├── cold war default\n│   ├── cold war mods\n│   ├── dark aether\n│   ├── dark matter ultra\n│   ├── output\n│   │   └── output of vanguard\n│   ├── vangaurd\n│   └── weapons\n├── dlc\n│   └── cod test game\n├── files\n│   ├── a.out\n│   ├── chrome dinosaur\n│   ├── crash test\n│   ├── df\n|   ├── easier loop\n│   ├── fh1\n│   ├── foward\n│   ├── hacks\n│   ├── hack v2\n|   ├── infinity\n│   ├── kg\n│   ├── kkop\n│   ├── looops\n│   ├── loop\n│   ├── main\n│   ├── null\n│   ├── sound\n│   ├── termianl\n│   ├── test 2\n│   ├── test 5\n│   └── testing\n├── fps\n│   ├── file.type'full_game_release'\n│   └── file.type'skeleton'\n├── li\n   └── rm\n│       ├── LICENSE\n│       └── README.md\n├── magicfiles\n│   ├── cod_2023\n│   ├── empty terminal\n│   ├── fps\n│   └── name test\n├── mh\n│   └── mh1\n├── mods\n│   ├── mod\n│   ├── mod 10\n│   ├── mod 2\n│   ├── mod 3\n│   ├── mod 4\n│   ├── mod 5\n│   ├── mod 6\n│   ├── mod 7\n│   ├── mod 8\n│   └── mod 9\n└── python\n    ├── hi9\n    ├── mh1 dlc 2\n    └── python choices test\n12 directories, 53 files\n")
+        lines()
+        
+    elif userInput == "yes":
+        yess()
+        
+    elif userInput == "l":
+        print(" c++/  'cold war'/   dlc/   files/   fps/   li/   mh/   mods/   python/")
+        lines()
+        
+    elif userInput == "ll":
+        print("total 52\ndrwxrwxrwx+ 13 codespace root      4096 Mar  6 14:58  ./\ndrwxr-xrwx+  5 codespace root      4096 Jan 19 17:30  ../\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 03:20  c++/\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  1 22:59 'cold war'/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:10  dlc/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 17:43  files/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:13  fps/\ndrwxrwxrwx+  8 codespace root      4096 Mar  3 01:28  .git/\\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  3 01:19  li/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:11  mh/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  1 21:44  mods/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 13:26  python/\ndrwxrwxrwx+  2 root      root      4096 Feb 23 19:40  .vscode/")
+        lines()
+        
+    elif userInput == "magicfiles":
+        print("[>magicfiles<]\nfile 'magicfiles' not availible for open\n{-magic-} + {-files-} = *error*\nteal/workspaces/files/ $")
+        lines()
+        
+    elif userInput == "file":
+        print("Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]\n[--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]\n[-m <magicfiles>] [-P <parameter=value>] <file> ...\nfile -C [-m <magicfiles>]\nfile [--help]")
+        lines()
+        
+    elif userInput == "df":
+        print("Filesystem     1K-blocks     Used Available Use% Mounted on\noverlay         32847680 12471652  18681928  41% /\ntmpfs              65536        0     65536   0% /dev\ntmpfs            2013272        0   2013272   0% /sys/fs/cgroup\nshm                65536        0     65536   0% /dev/shm\n/dev/sda1       30298176 21795184   8486608  72% /usr/sbin/docker-init\n/dev/sdb1       16401276      128  15546008   1% /tmp\n/dev/loop0      32847680 12471652  18681928  41% /workspaces")
+        lines()
+        
+    elif userInput == "name":
+        name()
+        
+    elif userInput == "while":
+        whiles()
+        
+    elif userInput == "time":
+        print("\nreal    0m0.003s\nuser    0m0.002s\nsys     0m0.001s")
+        lines()
+
+    elif userInput == "exit":
+        quit()
+        
+    elif userInput == "quit":
+        quit()
+        
+    else:
+        lines()
+    
+def liner():
+    userInput = ""
+    userInput = input(">>> ")
+    if userInput == "help":
+        print("help with what?")
+        helps()
+        
+    elif userInput == "python":
+        print("Python 3.10.4 (main, Dec 19 2022, 20:24:16) [GC 9.4.0] on Linux")
+        print("Type python, help, license, quit, w, ip, or exit for more information")
+        liner()
+        
+    elif userInput == "license":
+        print("MIT License\nCopyright (c) 2023 teallix\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the 'Software'), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.")  
+        liner()
+        
+    elif userInput == "ip":
+        print("Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }\nip [ -force ] -batch filename\nwhere  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |\ntunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |\nnetns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |\nvrf | sr | nexthop }\nOPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |\n-h[uman-readable] | -iec | -j[son] | -p[retty] |\n-f[amily] { inet | inet6 | mpls | bridge | link } |\n-4 | -6 | -I | -D | -M | -B | -0 |\n-l[oops] { maximum-addr-flush-attempts } | -br[ief] |\n-o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |\n-rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |\n-c[olor]}")
+        liner()
+        
+    elif userInput == "l":
+        print(" c++/  'cold war'/   dlc/   files/   fps/   li/   mh/   mods/   python/")
+        liner()
+        
+    elif userInput == "name":
+        name()
+        
+    elif userInput == "fps":
+        print("noun\nnoun: first-person shooter; plural noun: first-person shooters; noun: FPS; plural noun: FPSs\na type of video game whose gameplay involves shooting enemies and other targets and in which a player views the action as though through the eyes of the character they are controlling.\n'blast through hordes of aliens in this sci-fi first-person shooter'")
+        liner()
+        
+    elif userInput == "yes":
+        yess()
+        
+    elif userInput == "ll":
+        print("total 52\ndrwxrwxrwx+ 13 codespace root      4096 Mar  6 14:58  ./\ndrwxr-xrwx+  5 codespace root      4096 Jan 19 17:30  ../\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 03:20  c++/\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  1 22:59 'cold war'/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:10  dlc/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 17:43  files/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:13  fps/\ndrwxrwxrwx+  8 codespace root      4096 Mar  3 01:28  .git/\\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  3 01:19  li/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:11  mh/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  1 21:44  mods/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 13:26  python/\ndrwxrwxrwx+  2 root      root      4096 Feb 23 19:40  .vscode/")
+        liner()
+        
+    elif userInput == "df":
+        print("Filesystem     1K-blocks     Used Available Use% Mounted on\noverlay         32847680 12471652  18681928  41% /\ntmpfs              65536        0     65536   0% /dev\ntmpfs            2013272        0   2013272   0% /sys/fs/cgroup\nshm                65536        0     65536   0% /dev/shm\n/dev/sda1       30298176 21795184   8486608  72% /usr/sbin/docker-init\n/dev/sdb1       16401276      128  15546008   1% /tmp\n/dev/loop0      32847680 12471652  18681928  41% /workspaces")
+        liner()
+    
+    elif userInput == "tree":
+        print(".\n├── c++\n│   └── c++\n├── cold war\n│   ├── camo\n│   ├── cold war default\n│   ├── cold war mods\n│   ├── dark aether\n│   ├── dark matter ultra\n│   ├── output\n│   │   └── output of vanguard\n│   ├── vangaurd\n│   └── weapons\n├── dlc\n│   └── cod test game\n├── files\n│   ├── a.out\n│   ├── chrome dinosaur\n│   ├── crash test\n│   ├── df\n|   ├── easier loop\n│   ├── fh1\n│   ├── foward\n│   ├── hacks\n│   ├── hack v2\n|   ├── infinity\n│   ├── kg\n│   ├── kkop\n│   ├── looops\n│   ├── loop\n│   ├── main\n│   ├── null\n│   ├── sound\n│   ├── termianl\n│   ├── test 2\n│   ├── test 5\n│   └── testing\n├── fps\n│   ├── file.type'full_game_release'\n│   └── file.type'skeleton'\n├── li\n   └── rm\n│       ├── LICENSE\n│       └── README.md\n├── magicfiles\n│   ├── cod_2023\n│   ├── empty terminal\n│   ├── fps\n│   └── name test\n├── mh\n│   └── mh1\n├── mods\n│   ├── mod\n│   ├── mod 10\n│   ├── mod 2\n│   ├── mod 3\n│   ├── mod 4\n│   ├── mod 5\n│   ├── mod 6\n│   ├── mod 7\n│   ├── mod 8\n│   └── mod 9\n└── python\n    ├── hi9\n    ├── mh1 dlc 2\n    └── python choices test\n12 directories, 53 files\n")
+        liner()
+        
+    elif userInput == "time":
+        print("real    0m0.003s\nuser    0m0.002s\nsys     0m0.001s")
+        liner()
+        
+    elif userInput == "file":
+        print("Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]\n[--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]\n[-m <magicfiles>] [-P <parameter=value>] <file> ...\nfile -C [-m <magicfiles>]\nfile [--help]")
+        liner()
+
+    elif userInput == "exit":
+        lines()
+        
+    elif userInput == "while":
+        whiles()
+        
+    elif userInput == "w":
+        print(" 20:15:06 up 12 min,  0 users,  load average: 0.24, 0.58, 0.53\nUSER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT")
+        liner()
+        
+    elif userInput == "quit":
+        quit()
+        
+    else:
+        liner()
+        
+def helps():
+    userInput = ""
+    print("Type python, license, quit, exit, or exit for more information")
+    print("Else this is an empty terminal for thought")
+    userInput = input()
+    if userInput == "python":
+        print("Python 3.10.4 (main, Dec 19 2022, 20:24:16) [GC 9.4.0] on Linux")
+        print("Type python, help, license, quit, w, ip, or exit for more information")
+        lines()
+        
+    elif userInput == "w":
+        print(" 20:15:06 up 12 min,  0 users,  load average: 0.24, 0.58, 0.53\nUSER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT")
+        lines()
+    
+    elif userInput == "license":
+        print("MIT License\nCopyright (c) 2023 teallix\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the 'Software'), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.")
+        lines()
+        
+    elif userInput == "ip":
+        print("Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }\nip [ -force ] -batch filename\nwhere  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |\ntunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |\nnetns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |\nvrf | sr | nexthop }\nOPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |\n-h[uman-readable] | -iec | -j[son] | -p[retty] |\n-f[amily] { inet | inet6 | mpls | bridge | link } |\n-4 | -6 | -I | -D | -M | -B | -0 |\n-l[oops] { maximum-addr-flush-attempts } | -br[ief] |\n-o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |\n-rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |\n-c[olor]}")
+        lines()
+        
+    elif userInput == "yes":
+        yess()
+        
+    elif userInput == "tree":
+        print(".\n├── c++\n│   └── c++\n├── cold war\n│   ├── camo\n│   ├── cold war default\n│   ├── cold war mods\n│   ├── dark aether\n│   ├── dark matter ultra\n│   ├── output\n│   │   └── output of vanguard\n│   ├── vangaurd\n│   └── weapons\n├── dlc\n│   └── cod test game\n├── files\n│   ├── a.out\n│   ├── chrome dinosaur\n│   ├── crash test\n│   ├── df\n|   ├── easier loop\n│   ├── fh1\n│   ├── foward\n│   ├── hacks\n│   ├── hack v2\n|   ├── infinity\n│   ├── kg\n│   ├── kkop\n│   ├── looops\n│   ├── loop\n│   ├── main\n│   ├── null\n│   ├── sound\n│   ├── termianl\n│   ├── test 2\n│   ├── test 5\n│   └── testing\n├── fps\n│   ├── file.type'full_game_release'\n│   └── file.type'skeleton'\n├── li\n   └── rm\n│       ├── LICENSE\n│       └── README.md\n├── magicfiles\n│   ├── cod_2023\n│   ├── empty terminal\n│   ├── fps\n│   └── name test\n├── mh\n│   └── mh1\n├── mods\n│   ├── mod\n│   ├── mod 10\n│   ├── mod 2\n│   ├── mod 3\n│   ├── mod 4\n│   ├── mod 5\n│   ├── mod 6\n│   ├── mod 7\n│   ├── mod 8\n│   └── mod 9\n└── python\n    ├── hi9\n    ├── mh1 dlc 2\n    └── python choices test\n12 directories, 53 files\n")
+        lines()
+        
+    elif userInput == "l":
+        print(" c++/  'cold war'/   dlc/   files/   fps/   li/   mh/   mods/   python/")
+        lines()
+        
+    elif userInput == "ll":
+        print("total 52\ndrwxrwxrwx+ 13 codespace root      4096 Mar  6 14:58  ./\ndrwxr-xrwx+  5 codespace root      4096 Jan 19 17:30  ../\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 03:20  c++/\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  1 22:59 'cold war'/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:10  dlc/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 17:43  files/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:13  fps/\ndrwxrwxrwx+  8 codespace root      4096 Mar  3 01:28  .git/\\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  3 01:19  li/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:11  mh/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  1 21:44  mods/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 13:26  python/\ndrwxrwxrwx+  2 root      root      4096 Feb 23 19:40  .vscode/")
+        lines()
+        
+    elif userInput == "df":
+        print("Filesystem     1K-blocks     Used Available Use% Mounted on\noverlay         32847680 12471652  18681928  41% /\ntmpfs              65536        0     65536   0% /dev\ntmpfs            2013272        0   2013272   0% /sys/fs/cgroup\nshm                65536        0     65536   0% /dev/shm\n/dev/sda1       30298176 21795184   8486608  72% /usr/sbin/docker-init\n/dev/sdb1       16401276      128  15546008   1% /tmp\n/dev/loop0      32847680 12471652  18681928  41% /workspaces")
+        lines()
+        
+    elif userInput == "file":
+        print("Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]\n[--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]\n[-m <magicfiles>] [-P <parameter=value>] <file> ...\nfile -C [-m <magicfiles>]\nfile [--help]")
+        lines()
+        
+    elif userInput == "fps":
+        print("noun\nnoun: first-person shooter; plural noun: first-person shooters; noun: FPS; plural noun: FPSs\na type of video game whose gameplay involves shooting enemies and other targets and in which a player views the action as though through the eyes of the character they are controlling.\n'blast through hordes of aliens in this sci-fi first-person shooter'")
+        lines()
+        
+    elif userInput == "while":
+        whiles()
+        
+    elif userInput == "time":
+        print("real    0m0.003s\nuser    0m0.002s\nsys     0m0.001s")
+        lines()
+        
+    elif userInput == "name":
+        name()
+        
+    elif userInput == "quit":
+        quit()
+        
+    elif userInput == "exit":
+        lines()
+        
+    else:
+        helps()
+
+
+def whiles():
+    userInput = ""
+    userInput = input("> ")
+    if userInput == "file":
+        print("Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]\n[--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]\n[-m <magicfiles>] [-P <parameter=value>] <file> ...\nfile -C [-m <magicfiles>]\nfile [--help]")
+        whiles()
+        
+    elif userInput == "df":
+        print("Filesystem     1K-blocks     Used Available Use% Mounted on\noverlay         32847680 12471652  18681928  41% /\ntmpfs              65536        0     65536   0% /dev\ntmpfs            2013272        0   2013272   0% /sys/fs/cgroup\nshm                65536        0     65536   0% /dev/shm\n/dev/sda1       30298176 21795184   8486608  72% /usr/sbin/docker-init\n/dev/sdb1       16401276      128  15546008   1% /tmp\n/dev/loop0      32847680 12471652  18681928  41% /workspaces")
+        whiles()
+        
+    elif userInput == "l":
+        print(" c++/  'cold war'/   dlc/   files/   fps/   li/   mh/   mods/   python/")
+        whiles()
+        
+    elif userInput == "ll":
+        print("total 52\ndrwxrwxrwx+ 13 codespace root      4096 Mar  6 14:58  ./\ndrwxr-xrwx+  5 codespace root      4096 Jan 19 17:30  ../\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 03:20  c++/\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  1 22:59 'cold war'/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:10  dlc/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 17:43  files/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:13  fps/\ndrwxrwxrwx+  8 codespace root      4096 Mar  3 01:28  .git/\\ndrwxrwxrwx+  3 codespace codespace 4096 Mar  3 01:19  li/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  3 01:11  mh/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  1 21:44  mods/\ndrwxrwxrwx+  2 codespace codespace 4096 Mar  7 13:26  python/\ndrwxrwxrwx+  2 root      root      4096 Feb 23 19:40  .vscode/")
+        whiles()
+        
+    elif userInput == "exit":
+        lines()
+        
+    elif userInput == "name":
+        name()
+        
+    elif userInput == "tree":
+        print(".\n├── c++\n│   └── c++\n├── cold war\n│   ├── camo\n│   ├── cold war default\n│   ├── cold war mods\n│   ├── dark aether\n│   ├── dark matter ultra\n│   ├── output\n│   │   └── output of vanguard\n│   ├── vangaurd\n│   └── weapons\n├── dlc\n│   └── cod test game\n├── files\n│   ├── a.out\n│   ├── chrome dinosaur\n│   ├── crash test\n│   ├── df\n|   ├── easier loop\n│   ├── fh1\n│   ├── foward\n│   ├── hacks\n│   ├── hack v2\n|   ├── infinity\n│   ├── kg\n│   ├── kkop\n│   ├── looops\n│   ├── loop\n│   ├── main\n│   ├── null\n│   ├── sound\n│   ├── termianl\n│   ├── test 2\n│   ├── test 5\n│   └── testing\n├── fps\n│   ├── file.type'full_game_release'\n│   └── file.type'skeleton'\n├── li\n   └── rm\n│       ├── LICENSE\n│       └── README.md\n├── magicfiles\n│   ├── cod_2023\n│   ├── empty terminal\n│   ├── fps\n│   └── name test\n├── mh\n│   └── mh1\n├── mods\n│   ├── mod\n│   ├── mod 10\n│   ├── mod 2\n│   ├── mod 3\n│   ├── mod 4\n│   ├── mod 5\n│   ├── mod 6\n│   ├── mod 7\n│   ├── mod 8\n│   └── mod 9\n└── python\n    ├── hi9\n    ├── mh1 dlc 2\n    └── python choices test\n12 directories, 53 files\n")
+        lines()
+        
+    elif userInput == "time":
+        print("real    0m0.003s\nuser    0m0.002s\nsys     0m0.001s")
+        lines()
+        
+    elif userInput == "yes":
+        yess()
+        
+    elif userInput == "quit":
+        quit()
+        
+    elif userInput == "while":
+        whiles()
+        
+    elif userInput == "fps":
+        print("noun\nnoun: first-person shooter; plural noun: first-person shooters; noun: FPS; plural noun: FPSs\na type of video game whose gameplay involves shooting enemies and other targets and in which a player views the action as though through the eyes of the character they are controlling.\n'blast through hordes of aliens in this sci-fi first-person shooter'")
+        whiles()
+        
+    elif userInput == "w":
+        print(" 20:15:06 up 12 min,  0 users,  load average: 0.24, 0.58, 0.53\nUSER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT")
+        whiles()
+        
+    elif userInput == "python":
+        print("Python 3.10.4 (main, Dec 19 2022, 20:24:16) [GC 9.4.0] on Linux")
+        print("Type python, help, license, quit, w, ip, or exit for more information")
+        whiles()
+        
+    elif userInput == "license":
+        print("MIT License\nCopyright (c) 2023 teallix\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the 'Software'), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.")
+        whiles()
+        
+    elif userInput == "ip":
+        print("Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }\nip [ -force ] -batch filename\nwhere  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |\ntunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |\nnetns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |\nvrf | sr | nexthop }\nOPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |\n-h[uman-readable] | -iec | -j[son] | -p[retty] |\n-f[amily] { inet | inet6 | mpls | bridge | link } |\n-4 | -6 | -I | -D | -M | -B | -0 |\n-l[oops] { maximum-addr-flush-attempts } | -br[ief] |\n-o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |\n-rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |\n-c[olor]}")
+        whiles()
+        
+    else:
+        whiles()
+
+def yess():
+    print("yes")
+    time.sleep(0.005)
+    yesss()
+        
+        
+def yesss():
+    print("yes")
+    time.sleep(0.005)
+    yess()
+    
+def name():
+    names = ""
+    names = input("your name?...\n")
+    if names == "hi":
+        print("hi")
+        time.sleep(1)
+        lines()
+        
+    else:
+        print("hi, " +names+ ", there is no game")
+        time.sleep(3)
+        lines()
+
+lines()

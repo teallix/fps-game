@@ -1,0 +1,139 @@
+unsigned int gamespeed = 100;
+unsigned int stage = 1;
+
+void controls()
+{
+        for (int y = 0; y < 40; y++) {
+        for (int x = 0; x < 40; x++) {
+
+            switch ((*Map)[y][x]) {
+
+               case '#': //Uses ASCII characters instead of '#' for map borders
+               (*Map)[y][x] = 178; break;
+
+               case '@':
+               if (GetAsyncKeyState(VK_UP) != 0) //If user presses the UP arrow
+               {
+                int y2 = (y -1);
+                switch ((*Map)[y2][x])
+                {
+                case ' ': //Moves the player
+                (*Map)[y][x] = ' ';
+                y -= 1;
+                (*Map)[y2][x] = '@';
+                break;
+
+                case '*': //Trap - takes away 10 health and moves the player to it's location
+                HP -= 10;
+                (*Map)[y][x] = ' ';
+                y -= 1;
+                (*Map)[y2][x] = '@';
+                break;
+
+                case '+': //Potion - same as trap but adds 20 health instead
+                HP += 20;
+                (*Map)[y][x] = ' ';
+                y -= 1;
+                (*Map)[y2][x] = '@';
+                break;
+
+                case '!': //Exit - moves the player to the next map
+                stage += 1; break;
+                }
+               }
+
+               if (GetAsyncKeyState(VK_DOWN) != 0) //If user presses DOWN arrow
+               {
+                int y2 = (y +1);
+                switch ((*Map)[y2][x])
+                {
+                case ' ':
+                (*Map)[y][x] = ' ';
+                y += 1;
+                (*Map)[y2][x] = '@';
+                break;
+
+                case '*':
+                HP -= 10;
+                (*Map)[y][x] = ' ';
+                y += 1;
+                (*Map)[y2][x] = '@';
+                break;
+
+                case '+':
+                HP += 20;
+                (*Map)[y][x] = ' ';
+                y += 1;
+                (*Map)[y2][x] = '@';
+                break;
+
+                case '!':
+                stage += 1; break;
+                }
+               }
+
+               if (GetAsyncKeyState(VK_RIGHT) != 0) //If user presses RIGHT arrow
+               {
+                int x2 = (x +1);
+                switch ((*Map)[y][x2])
+                {
+                case ' ':
+                (*Map)[y][x] = ' ';
+                x += 1;
+                (*Map)[y][x2] = '@';
+                break;
+
+                case '*':
+                HP -= 10;
+                (*Map)[y][x] = ' ';
+                x += 1;
+                (*Map)[y][x2] = '@';
+                break;
+
+                case '+':
+                HP += 20;
+                (*Map)[y][x] = ' ';
+                x += 1;
+                (*Map)[y][x2] = '@';
+                break;
+
+                case '!':
+                stage += 1; break;
+                }
+               }
+
+               if (GetAsyncKeyState(VK_LEFT) != 0) //If user presses LEFT arrow
+               {
+                int x2 = (x -1);
+                switch ((*Map)[y][x2])
+                {
+                case ' ':
+                (*Map)[y][x] = ' ';
+                x -= 1;
+                (*Map)[y][x2] = '@';
+                break;
+
+                case '*':
+                HP -= 10;
+                (*Map)[y][x] = ' ';
+                x -= 1;
+                (*Map)[y][x2] = '@';
+                break;
+
+                case '+':
+                HP += 20;
+                (*Map)[y][x] = ' ';
+                x -= 1;
+                (*Map)[y][x2] = '@';
+                break;
+
+                case '!':
+                stage += 1; break;
+                }
+               }
+               break;
+            }
+        }
+        }
+Sleep(gamespeed); //Pauses slightly to reduce flicker
+}

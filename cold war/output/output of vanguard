@@ -1,0 +1,73 @@
+import time
+
+def main():
+    print("|----____The Output Is Near___----|")
+    time.sleep(2)
+    main2()
+        
+        
+def main2():
+    userInput = ""
+    print("|Beware|")
+    userInput = input()
+    if userInput == "1":
+        main3()
+        
+    elif userInput == "Beware":
+        main3()
+        
+    elif userInput == "beware":
+        main3()
+        
+    else:
+        main4()
+        
+def main3():
+    time.sleep(0.00000000000000000000001)
+    main2()
+        
+        
+def main4():
+    userInput = ""
+    print("so, yes, vanguard was a failure")
+    time.sleep(3)
+    print("the only reason it was made, was to add ww2 weapons to warzone")
+    time.sleep(3)
+    print("and was still, a disaster")
+    time.sleep(2)
+    print("so, do you want the whole story?")
+    time.sleep(2)
+    print("if so, then press yes")
+    time.sleep(1)
+    userInput = input()
+    if userInput == "yes":
+        print("Bugs and glitches, across Vanguard's entire life cycle, have taken far too long to be remedied and seriously impacted the average player's experience.")
+        time.sleep(5)
+        print("Call of Duty: Vanguard underperformed for Activision, and the publisher reckons that's partly because some people just don't care about World War 2.")
+        time.sleep(5)
+        print("Call of Duty: Vanguard is one of the lowest selling games in the shooter series. In fact, Vanguard posted the worst franchise launch since 2007 in some regions")
+        time.sleep(7)
+        print("so, you see, it was such a bad game, and that's not even all of it")
+        time.sleep(4)
+        print("it got so much hate that they almost shut down the servers")
+        time.sleep(4)
+        print("and that's how call of duty vanguard is more like call of duty failguard, or vanfailed")
+        time.sleep(5)
+        quit()
+        
+    elif userInput == "no":
+        print("ok then")
+        time.sleep(3)
+        quit()
+        
+    elif userInput == "back":
+        print("ok then")
+        time.sleep(2)
+        main2()
+        
+    else:
+        print("that's not a yes or no")
+        time.sleep(1)
+        main4()
+        
+main()

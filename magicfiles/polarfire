@@ -1,0 +1,205 @@
+// Main:
+// Have a login page
+// Have profiles and profile editing
+// Have profiles levels and rewards
+// Have modes and weapon smith
+// Have weapon levels and camos and camo tracking
+// Have skins and skin customization
+// Have store for optional purchasing
+// Have microtransactions(optional for user)
+// Have custom game modes and maps
+// Have tournament modes
+// Have a main page for what the game is about and game modes are about
+// Allow cross-play
+// Allow cross-matchmaking
+// Have a terms and conditions for players to read and understand and agree to
+// Have a server list to choose from; example; na central, na east, asia west, asia, east, na west, central, etc.
+// Have game be $20.00 - $30.00[based on country]
+
+// Weapons:
+// Have base, default weapons unlocked from the start for default
+// Have with every new weapon, a new challenge to unlock it[easy challenge]
+// Have every weapon have a custom, different camo
+// Have[when completed], xp granted when unlocking a new weapon
+
+// Progression:
+// Have a basic leveling system for when an amount of xp is obtained
+// Have when a certain level is reached, grant the player a camo, lethal, tactical, weapon, or streak based on the level
+
+// Character Customization:
+// Have the ability to customize everything from the head, to the feet
+// Have[in-store], a character part to change on character for each and every character[when bought or achieved]
+
+// Store:
+// Have bundles including: weapons, weapon camos, skin customization, weapon leveling, and more for in-game currency
+// Have a basic micro-transaction system[with purchasable currency]
+
+// Characters:
+// Have different characters with different abilities for each character
+
+// Camo[s]:
+// Have different camo challenges for each weapon
+// Have a very good [in-game]camo challenge tracker accounting for usage of different abilities at the time and different settings at the time
+// Have a different ability camo tracker for in-game tracking with precision-sight accuracy at challenges done during the game
+// Have a camo challenge completion icon in-game detailing the specific challenge done with the camo and weapon
+// Have xp granted when camo challenge done
+// Have custom camo[s] the players can make and import
+
+// Perk[s]/Perk System:
+// Have a base perk system with simple perks and advanced perks
+// Have base perks give more helpfulness and more generality, while the advanced perks focus on more specific traits/abilities with more downsides/cons in return, but with greater pros with it
+
+// Attachments:
+// When the player levels up their weapon, have it unlock a different attachment for the player to equip on their weapon
+// Have every gun be able to put all attachment slots on their weapon
+// Have vastly different attachments for every weapon, with different traits/pros/cons coming with them
+
+// Xp:
+// grant the player xp when; elimination, match won, enemy special destroyed, assist, vehicle destroyed, camo unlocked, special unlocked, character unlocked, weapon unlocked, control over objective, objective completed, objective held, use/usage of special, elimination with lethal, certain amount of time played, challenge completed, and level gained
+
+// Sound Effects:
+// Have sound effects for; elimination, headshot elimination, footstep[s], lethal[s], tactical[s], camo challenge[s] completed, weapon challenge[s] completed, button[s] pressed, option[s] chosen, music, setting[s] pressed, special[s] used, bundle[s]/item purchased, weapon sound[s], error[s] occurred, level[s] gained, objective[s] held/captured/controlled, game trailer[s], enemy weapon[s]/lethal[s]/tactical[s] used, dialogue, zombie sound[s], login, logout, account deleted, purchase canceled, cutscene[s], player[s] banned, rank up, affect[s] from bullet/blood/gore/wall bang/destruction, option exited, hovering over an object/option, jumping, sliding, crouching, and more
+
+// Tournament[s]:
+// In the games lifecycle, have tournament[s] for money in which the community can compete in
+// Have pro tournaments in which only the best players can compete in
+
+// Languages:
+// Allow for up to 80 different languages to choose from
+// Different languages found in settings
+
+// Ranked:
+// Have a ranked mode with reward in which players can compete in
+// Have a simple and easy rank-system from winning/losing/kills in games
+
+// Streaks:
+// When player gets a certain amount of score, have the player get a streak from it
+
+// Leaderboard:
+// Have the top 500 players in the game listed
+// Have several leaderboards, consisting of; amount of elimination[s], score, k/d, damage, death[s], and more
+// Have losses and wins leaderboard
+// Have a very accurate tracker for leaderboards
+
+// Game:
+// Have several maps with several easter eggs in each[at least 13 maps and at least 2 easter eggs per map]
+// Have several different map-based game modes[different maps for search and destroy, different maps for free for all, different maps for ground war, and more]
+// Have different collision for different structure types[some walls wall-bangable]
+// Have a spectator mode/camera for eliminated players
+// Have free cam for eliminated players[optional]
+// Have special game and tournament camos
+
+// Graphics:
+// Have an arcady-type look and feel
+// Bright, colorful, and vibrant colors for a nice look and feel
+
+// Bugs and glitches:
+// Constant bug tests and glitch test every addition to the game
+// Any in-game bugs and glitches[whether it`s login, security, anticheat, leveling, camo tracking and progression, or more] need to be patched asap in open alpha and open beta before the whole game is released
+
+// Feedback:
+// Have a monthly feedback page for players to give us their feedback
+// Check in on social media for feedback from players on what to change/add/fix
+// Have a feedback button people can press to give feedback on the game
+
+// Updates:
+// Constant updates including: weapons, patches, maps, game modes, and more customization and features every week[along with bug and glitch testing for each update]
+
+// Settings:
+// Have a basic settings for advanced options for the player to choose from
+
+// Lethals/Tacticals:
+// Have base lethals: example: thermite, powertine, jubulizer
+// Have advanced lethals
+// Have base tacticals: example: stun, stabilizer, jugi
+// Have advanced tacticals
+
+// Ai:
+// Have intelligent and not overpowered ai for different game modes
+// Have the ai play a tactical playstyle
+// Do not make the ai have stupid overpowered aim
+// Have ai(bots) for private and offline games
+
+// Graphics:
+// Have an arcady-type look and feel
+// Bright, colorful, and vibrant colors for a nice look and feel
+
+// Affects:
+// Have blood and gore when shot/eliminated
+// Have explosion effects on nearby structures
+// Have color affects when using special equipment/specials/special abilities
+
+// Soundtrack:
+// Ask for samples from Activision Black Ops Cold War
+// Original sounds via Jack Wall
+// Hire a design team to jingles for both Zombies and Multiplayer
+
+// Censoring:
+// Censoring option for the player in settings
+// Default: no censoring
+
+// Age of Player[s]:
+// Player has to put in age when making [an] account
+// Only people over the age of 10 play the game
+
+// Voice Chat:
+// Allow voice Chat
+// Allow push-to-talk
+// Have a in-game and in-party typing chat
+
+// Reports:
+// Allow player to report someone for: cheating, glitch/bug abusing, inappropriate language, promoting terrorism, and more[with custom message if player chooses to]
+
+// Funding/Sponsoring:
+// Sell items and toys along with other things for money and funding
+// Get sponsors to support and advertise game
+
+// Animations:
+// Different animations for climbing, sliding, flying, falling, shot at, eliminated, special abilities, and more
+
+// Game engine:
+// Unreal engine for a fast and accurate engine
+// If Unreal engine doesn`t work, then we will make our own
+
+// Multiplayer:
+// Allow cross-play
+// Allow cross-matchmaking
+// Have different game modes and game playing options
+
+// Zombies:
+// Have several different maps with many easter eggs in each
+// Have each map have a different storyline all connected from one to another
+// Have cross-play
+// Have a connected and intertwined perk system
+// Have zombie camo challenges and camo tracking
+// Have special camos
+// Have upgrade station for weapons
+// Have different factions with different backstories and connections
+
+// Anti cheat(relentless):
+// Have anti cheat detect cheaters and hackers
+// Have anti cheat counter-measures for innocent players(if a hacker is detected make the other players be invisible and not take damage from the cheater and either temporarily ban or permanently ban the cheater or hacker after the game)
+// Have a report button for people to report cheaters or hackers
+// After a certain amount of reports, either look into account, ban(temporarily or permanently), or punish in various ways for humiliation
+// When a cheater is found and banned/punished, rid the leaderboard of that impersonated humiliation
+
+// Anti-cheat counter-measures:
+// Damage shield and invisibility for innocent players against hacker[s]
+
+// Name:
+// Polarfire
+// Polarfire custom
+// Polarfire open range
+// Polarfire zombies
+
+// Copyright:
+// These documents, and the content inside, is hereby given the permission of the owner to be used by anyone obtaining a copy of the document[s]
+// However, that permission is not granted to change, edit, or delete any part or section from these documents
+// If the user wishes to use the document[s] in a paper, essay, etc., the user must give credit to the owner of the document[s]
+// Any music used we do not have the rights to and anyone pertaining to this game is not allowed to use the music unless owned by that particular person[s]
+// The name of the game is not given permission by the owner to be used by anyone not pertaining to the creation/release/permission of the game to be used in such a way as to plagiarize the game in any form or way
+// Any names of characters, locations, or any other part of the game are purely coincidental and were not used intentionally for plagiarism-type use
+// With that being said, any names of characters, locations, or such other original content is not given the right to be used by anyone else and if used by such a person, will be plagiarized
+// Any contact needed can be sent to @Aiden.hesser@gmail.com for more information needed or necessary
+
+// Copyright© 2023 by by via @Aiden Hesser

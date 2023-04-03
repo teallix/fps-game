@@ -1,0 +1,15 @@
+import time
+
+def main():
+    name = input("your name?...\n")
+    
+    print("hello, " +name+ ", you are dead")
+    time.sleep(2.5)
+    introscene()
+
+def introscene():
+    print("you are dead")
+    time.sleep(3)
+    quit()
+
+main()

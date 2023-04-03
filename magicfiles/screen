@@ -1,0 +1,134 @@
+include <main>
+
+private:
+    void DrawPixel(int index, sf::Color c)
+    {
+        // Each quad is has 4 vertices so we have to move the index with * 4 to get the
+        // first vertex of a quad, then we go through all 4 of the vertices and change their
+        // colour to the one requested
+        for (int i = 0; i < 4; i++)
+        {
+            m_quads[index * 4 + i].color = c;
+        }
+    }
+
+protected:
+    void Event(sf::Event e) override
+    {
+    }
+
+protected:
+    bool OnUserCreate() override
+    {
+        // Show FPS Counter
+        EnableFPSCounter(true);
+
+        // Create map where # represents a wall and . represends free space
+        m_map += "################################";
+        m_map += "#..............#...............#";
+        m_map += "#..............#...............#";
+        m_map += "#######........#...####........#";
+        m_map += "#..............#...............#";
+        m_map += "#..............................#";
+        m_map += "#..............................#";
+        m_map += "#..............................#";
+        m_map += "#..........#####...........#####";
+        m_map += "#..............#...............#";
+        m_map += "#..............#...............#";
+        m_map += "#....#.........#...............#";
+        m_map += "#..............#...............#";
+        m_map += "#..............................#";
+        m_map += "#..............................#";
+        m_map += "################################";
+
+        printf("Map Size: %d\n", m_map.size());
+
+        // Map size
+        m_nScreenWidth = 320;
+        m_nScreenHeight = 240;
+
+        m_fPlayerX = 8.0f;
+        m_fPlayerY = 8.0f;
+        m_fPlayerAngle = 8.0f;
+        
+        m_fFOV = PI / 2.0f;
+        
+        m_fDepth = 32.0f;
+        
+        m_fPixelSizeX = (float)ScreenWidth / (float)m_nScreenWidth
+        m_fPixelSizeY = (float)ScreenHeight / (float)m_nScreenHeight
+        
+        m_fSpeed = 5.0f;
+        
+        m_quads.setPrimitiveType(sf::Quads);
+
+        // Setup QUADS location and size
+        for (int y = 0; y < m_nScreenHeight; y++)
+        {
+            for (int x = 0; x < m_nScreenWidth; x++)
+            {
+                // Upscaled coordinates
+                float sx = x * m_fPixelSizeX;
+                float sy = y * m_fPixelSizeY;
+
+                // Append vertices in a clock-wise or counter-clock-wise order
+                m_quads.append(sf::Vertex(sf::Vector2f(sx, sy), sf::Color::Black));
+                m_quads.append(sf::Vertex(sf::Vector2f(sx + m_fPixelSizeX, sy), sf::Color::Black));
+                m_quads.append(sf::Vertex(sf::Vector2f(sx + m_fPixelSizeX, sy + m_fPixelSizeY), sf::Color::Black));
+                m_quads.append(sf::Vertex(sf::Vector2f(sx, sy + m_fPixelSizeY), sf::Color::Black));
+            }
+        }
+
+        return true;
+    }
+
+ bool OnUserUpdate(sf::Time elapsed) override
+    {
+        // Keyboard input - ROTATIONS and MOVEMENT
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+            m_fPlayerAngle -= (m_fSpeed * 0.4f) * elapsed.asSeconds();
+        
+        if (sf::Keyboard::ifKeyPressed(sf::Keyboard::D))
+            m_fPlayerAngle -= (m_fSpeed * 0.4f) * elapsed.asSeconds();
+
+        
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+        {
+            // Move in unit vector direction
+            m_fPlayerX += cosf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+            m_fPlayerY += sinf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+
+            // Collision with wall
+            if (m_map[(int)m_fPlayerY * m_nMapWidth + (int)m_fPlayerX] == '#')
+            {
+                m_fPlayerX -= cosf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+                m_fPlayerY -= sinf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+            }
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::T))
+            m_fPlayerAngle -= (m_fSpeed * 8.0f) * elapsed.asSeconds();
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::k))
+            m_fPlayerAngle -= (m_fSpeed * 0.1f) * elapsed.asSeconds();
+
+        if (sf::Keyboard::ifKeyPressed(sf::Keyboard::N))
+            m_fPlayerAngle -= (m-fSpeed * 0.4f) * elapsed.asSeconds();
+
+        
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+        {
+            // Move in unit vector direction
+            m_fPlayerX -= cosf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+            m_fPlayerY -= sinf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+
+            // Collision with wall
+            if (m_map[(int)m_fPlayerY * m_nMapWidth + (int)m_fPlayerX] == '#')
+            {
+                m_fPlayerX += cosf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+                m_fPlayerY += sinf(m_fPlayerAngle) * m_fSpeed * elapsed.asSeconds();
+            }
+        }
+
+float m_nScreenWidth = 320;
+float m_nScreenHeight = 240;

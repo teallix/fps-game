@@ -1,0 +1,179 @@
+
+protected:
+    bool OnUserCreate() override
+    {
+        // Show FPS Counter
+        EnableFPSCounter(true);
+
+m_map += "###################"
+m_map += "#........#...###..#"
+m_map += "#.#......#....#...#"
+m_map += "#.......####......#"
+m_map += "#.................#"
+m_map += "#.................#"
+m_map += "#...##............#"
+m_map += "###################"
+
+printf("Map Size: %d\n", m_map.size());
+
+        // Map size
+        m_nMapWidth     = 32;
+        m_nMapHeight    = 32;
+
+        // User window size
+        m_nScreenWidth  = 320;
+        m_nScreenHeight = 240;
+
+        // Player position and player looking angle
+        m_fPlayerX      = 8.0f;
+        m_fPlayerY      = 8.0f;
+        m_fPlayerAngle  = 0.0f;
+
+        // Field of view = 90 degrees
+        m_fFOV          = PI / 2.0f;
+
+        // Max distance to wall
+        m_fDepth        = 32.0f;
+
+        // set Pixel Size
+        m_fPixelSizeX = (float)ScreenWidth() / (float)m_nScreenWidth;
+        m_fPixelSizeY = (float)ScreenHeight() / (float)m_nScreenHeight;
+
+        // Player move and rotation speed
+        m_fSpeed = 5.0f;
+
+        // Set primitive type
+        m_quads.setPrimitiveType(sf::Quads);
+
+        // Setup QUADS location and size
+        for (int y = 0; y < m_nScreenHeight; y++)
+        {
+            for (int x = 0; x < m_nScreenWidth; x++)
+            {
+                // Upscaled coordinates
+                float sx = x * m_fPixelSizeX;
+                float sy = y * m_fPixelSizeY;
+
+                // Append vertices in a clock-wise or counter-clock-wise order
+                m_quads.append(sf::Vertex(sf::Vector2f(sx, sy), sf::Color::Black));
+                m_quads.append(sf::Vertex(sf::Vector2f(sx + m_fPixelSizeX, sy), sf::Color::Black));
+                m_quads.append(sf::Vertex(sf::Vector2f(sx + m_fPixelSizeX, sy + m_fPixelSizeY), sf::Color::Black));
+                m_quads.append(sf::Vertex(sf::Vector2f(sx, sy + m_fPixelSizeY), sf::Color::Black));
+            }
+        }
+
+        return true;
+    }
+
+window.setView(minimap);
+
+sf::CircleShape object;
+object.setRadius(200);
+object.setFillColor(sf::Color::Blue);
+object.setPosition(player.getPosition());
+window.draw(object);
+
+
+object.setFillColor(sf::Color::Red);
+for (auto& e : enemies)
+{
+    object.setPosition(e->getPosition());
+    window.draw(object);
+}
+
+window.setView(view);
+
+m_map += "                ###################             #############################           "
+m_map += "                #...............###          ###/////////........../////////#           "
+m_map += "                #................/#         #///////////....................#           "
+m_map += "                ##/////.......///#         /................................#           "
+m_map += "                 #...............##########............/////////#############           "
+m_map += "                 #...................../............../.........#                       "
+m_map += "                 #...................................../.........#                      "
+m_map += "                 #//////...............................############                     "
+m_map += "                 ##////////////........./.............#                                 "
+m_map += "                  #////////............................###########                      "
+m_map += "                  ##///////////////...........///..............#                        "
+m_map += "               #///............................................#####                    "
+m_map += "               #........................../...................##                        "
+m_map += "               #..............................................#                         "
+m_map += "                #.............................................#####                     "
+m_map += "                 #...................///..........................########              "
+m_map += "                 #...............///########///...................########              "
+m_map += "                 #................../#    ##/............/.............###              "
+m_map += "                #................../#      ##//////.....................##              "
+m_map += "               ####///////......../#        #//..........................#              "
+m_map += "               ####################         ##############################              "
+
+
+class Fps
+{
+protected:
+    unsigned int m_fps;
+    unsigned int m_fpscount;
+    Interval m_fpsinterval;
+
+public:
+    // Constructor
+    Fps() : m_fps(0), m_fpscount(0)
+    {
+    }
+
+    // Update
+    void update()
+    {
+        // increase the counter by one
+        m_fpscount++;
+
+        // one second elapsed? (= 1000 milliseconds)
+        if (m_fpsinterval.value() > 1000)
+        {
+            // save the current counter value to m_fps
+            m_fps         = m_fpscount;
+           
+            // reset the counter and the interval
+            m_fpscount    = 0;
+            m_fpsinterval = Interval();
+        }
+    }
+
+    // Get fps
+    unsigned int get() const
+    {
+        return m_fps;
+    }
+};
+
+// we need one Fps object stored globally
+Fps fps;
+
+void onGameUpdate()
+{
+    // update player movement
+    // ...
+   
+    // update monster ai
+    // ...
+   
+    // add special effects
+    // ...
+   
+    // update frames per second
+    fps.update();
+}
+
+void processInput()
+{
+    // print out the fps if f12 was pressed
+    if (keyPressed("F12")) {
+        std::cout<<"Fps: "<<fps.get()<<'\n';
+    }
+}
+
+void processInput()
+{
+if (keyPressed("1")) {
+    std::cout<<"Fps: "<<fps.get()<<'\n\';
+    
+    }
+}
