@@ -1,5 +1,0 @@
-import time
-
-gh = clock()
-
-print("time is" +gh+ "")

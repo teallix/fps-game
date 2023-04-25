@@ -1,0 +1,34 @@
+m_nScreenWidth = 320;
+m_nScreenHeight = 240;
+
+m_fSpeed = 5.0f;
+
+m_fFOV = PI / 2.0f;
+
+m_fDepth = 32.0f;
+
+m_fPlayerX = 8.0f;
+m_fPlayerY = 8.0f;
+m_fPlayerAngle = 8.0f;
+
+m_fPixelSizeX = (float)ScreenWidth / (float)m_nScreenWidth
+m_fPixelSizeY = (float)ScreenHeight / (float)m_nScreenHeight
+
+float m_fFOV = PI / 2.0f;
+float m_fDepth = 32.0f;
+float m_nScreenWidth = 320;
+float m_nScreenHeight = 240;
+float m_fSpeed = 5.0f;
+float m_fPlayeyX = 8.0f;
+float m_fPlayerY = 8.0f;
+float m_fPlayerAngle = 8.0f;
+= (float)ScreenWidth / (float)m_nScreenWidth
+m_fHeiWid = (float)ScreenHeight / (float)m_nScreenWidth
+m_fWidHei = (float)ScreenWidth / (float)m_nScreenHeight
+m_fJKLX = (float)PlayerX / (float)m_fPlayerX
+m_fJKLY = (float)PlayerY / (float)m_fPlayerY
+m_fSoundEffectsBattle1 = (float)SoundEffects / (float)m_fSoundEffectsBattle
+m_fSoundEffectsMain1 = (float)SoundEffects / (float)m_fSoundEffectsMain
+m_fSoundEffectsSoundtrack1 = (float)SoundEffects / (float)m_fSoundEffectsSoundtrack
+m_fSoundEffectsSoundtrackBattle1 = (float)SoundEffects / (float)m_fSoundEffectSoundtrackBattle
+m_fSoundEffectSoundtrackBattleOfWarlandsFortSeige1 = (float)SoundEffects / (float)m_fSoundEffectsSoundtrackBattleOfWarlandFortSeige

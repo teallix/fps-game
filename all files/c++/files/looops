@@ -1,0 +1,12 @@
+import time
+
+def main():
+    print("!")
+    time.sleep(0.01)
+    print("!!")
+    time.sleep(0.01)
+    print("!!!")
+    time.sleep(0.01)
+    main()
+    
+main()

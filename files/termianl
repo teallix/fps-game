@@ -1,7 +1,0 @@
-def tem():
-    userI = ""
-    userI = input()
-    if userI == "yes":
-        print("yes")
-        
-tem()

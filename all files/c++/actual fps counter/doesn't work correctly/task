@@ -1,0 +1,13 @@
+from time import sleep,time
+fps = 0
+fps_count = 0
+start_time = time()
+while True:
+   if (time()-start_time) > 1:
+     fps = fps_count
+     fps_count = 1
+     start_time = time()
+   else:
+     fps_count += 1 
+     
+   print("FPS:",fps)

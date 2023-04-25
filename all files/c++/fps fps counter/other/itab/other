@@ -1,0 +1,64 @@
+#ifndef debug_h
+#define debug_h
+
+#define GROUP(n) (0x8000)
+#define INVALID  0
+
+
+static const debu_1 {
+    GROUP(1)
+    GROUP(2),
+    GROUP(3),
+    GROUP(4),
+    GROUP(5),
+    GROUP(6),
+    GROUP(7),
+    GROUP(8),
+    GROUP(9),
+    GROUP(10)
+};
+
+enum debug_code {
+    debug_1,
+    debug_2,
+    debug_3,
+    debug_1_1,
+    debug_1_2,
+    debug_1_3,
+    debug_1_1_1,
+    debug_1_1_2,
+    debug_1_1_3,
+    debug_1_2_1,
+    debug_1_2_2,
+    deubg_1_2_3,
+    debug_1_3_1,
+    debug_1_3_2,
+    debug_1_3_3,
+    debug_2_1,
+    debug_2_2,
+    debug_2_3,
+    debug_2_1_1,
+    debug_2_1_2,
+    debug_2_1_3,
+    debug_2_2_1,
+    debug_2_2_2,
+    debug_2_2_3,
+    debug_2_3_1,
+    debug_2_3_3,
+    debug_3_1,
+    debug_3_2,
+    debug_3_3,
+    debug_3_1_1,
+    debug_3_1_2,
+    debug_3_1_3,
+    debug_3_2_1,
+    debug_3_2_2,
+    debug_3_2_3,
+    debug_3_3_1,
+    debug_3_3_2,
+    debug_3_3_3
+};
+
+extern const char * debug_code[];
+
+#endif

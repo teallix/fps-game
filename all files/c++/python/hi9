@@ -1,0 +1,88 @@
+import time
+
+def main():
+    name = input("your name?...\n")
+    
+    print("hello, " +name+ ", you can choose your way")
+    
+    introscene()
+    
+def introscene():
+    userInput = ""
+    print("you can choose you life")
+    time.sleep(1.5)
+    print("what do you want?")
+    time.sleep(1.5)
+    print("call of duty, or minecraft?")
+    userInput = input()
+    if userInput == "call of duty":
+        print("ok then, live a good life")
+        time.sleep(2)
+        cod()
+        
+    elif userInput == "minecraft":
+        print("ok then, little boy, let us continue...")
+        time.sleep(2)
+        minecraft()
+        
+    else:
+        print("that is not an answer")
+        time.sleep(1)
+        introscene()
+        
+def cod():
+    print(".")
+    time.sleep(1)
+    print("..")
+    time.sleep(1)
+    print("...")
+    time.sleep(1)
+    print("hahahahaha")
+    time.sleep(2)
+    print("you die now...")
+    time.sleep(3)
+    cod2()
+    
+def minecraft():
+    print(".")
+    time.sleep(1)
+    print("..")
+    time.sleep(1)
+    print("...")
+    time.sleep(2)
+    print("minecraft is not cool")
+    time.sleep(1.5)
+    print("so you die now")
+    time.sleep(3)
+    quit()
+    
+def cod2():
+    userInput = ""
+    print("...so, cod huh?...")
+    time.sleep(1.5)
+    print("...why?")
+    time.sleep(1.5)
+    print("which cod is best: Bo2, Bo1, or Mw2 2009?")
+    userInput = input()
+    if userInput == "Bo2":
+        print("yes, but it doesn't matter")
+        time.sleep(3)
+        quit()
+        
+    elif userInput == "Bo1":
+        print("um, so no, but ok")
+        time.sleep(3)
+        quit()
+        
+    elif userInput == "Mw2":
+        print("yes, but not matter")
+        time.sleep(3)
+        quit()
+        
+    else:
+        print("that is not an answer")
+        time.sleep(1)
+        cod2()
+        
+    
+main()

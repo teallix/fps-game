@@ -1,0 +1,5 @@
+youtube.videos.update({
+    recource: video,
+    part: 'snippet',
+    auth: auth,
+});

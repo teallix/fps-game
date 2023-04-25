@@ -1,0 +1,20 @@
+Number number;
+
+void onGameUpdate()
+{
+
+    // ...
+
+    // ...
+    
+    // ...
+
+    number.update();
+}
+
+void processInput()
+{
+    if (keyPressed("1")) {
+        std::cout<<"Number :"<<number.get()<<'\n';
+    }
+}

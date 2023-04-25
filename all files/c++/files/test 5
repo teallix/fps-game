@@ -1,0 +1,18 @@
+import time
+
+def main():
+    print("@!$;loading 'files'")
+    time.sleep(0.09)
+    main2()
+    
+def main2():
+    print("op*((:4090)qleE($@#$)##($@#($qwp[l[qew")
+    time.sleep(0.09)
+    main3()
+    
+def main3():
+    print("loading(png)from(files); png 1, png 2, png 3; run.png'files'")
+    time.sleep(0.09)
+    main()
+    
+main()

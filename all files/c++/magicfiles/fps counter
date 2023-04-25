@@ -1,0 +1,59 @@
+TutorialsArticlesPremiumBooksAbout
+C++ Frames per Second
+Foreword
+When making a game we need to make sure that it's running smooth all the time. We usually measure the smoothness with Frames per Second.
+
+What are Frames per Second
+Frames per second (FPS) means how many pictures does the game throw at us per second. If we play a very graphic intense game on a very old computer then we can see what happens if we don't have enough frames per second in a game. Everything seems to be stuck and it's not really a game but a slideshow of pictures. The difference between a slideshow and a video are simply the frames per second. A slideshow just has one or two per second, a video has about 25, that's why it looks smooth.
+
+The usual goal is to have about 60 frames per second in our games, so they don't appear like a slideshow at all. Hard core gamers will even see a difference between 60 and 100 frames per second, so we need to make sure to get them as high as possible. If we can get it to 60 FPS it's usually okay, but if more are possible then we should try to get more.
+
+We can achieve high FPS rates by having very fast algorithms in our game, so calculating a single frame (picture) happens as fast as possible. The purpose of this tutorial will be to calculate the frames per second and not to make them as high as possible, since this is far more complicated and depends on a lot of things.
+
+The Math behind it
+Calculating the FPS in a game is very simple. All we need to do is increase a counter every time a new picture is being drawn, and after one second has elapsed we get the FPS by taking the value of that counter.
+
+The Implementation
+For simplicity we will implement the FPS class in one file instead of a .h and a .cpp file (which does not mean that you shouldn't split it in a .h and .cpp file).
+
+To find out if one second has passed, we will use the Interval class that we implemented in this tutorial: C++ Time Measurement.
+
+Here is the code:
+
+class Fps
+{
+protected:
+    unsigned int m_fps;
+    unsigned int m_fpscount;
+    Interval m_fpsinterval;
+
+public:
+    // Constructor
+    Fps() : m_fps(0), m_fpscount(0)
+    {
+    }
+
+    // Update
+    void update()
+    {
+        // increase the counter by one
+        m_fpscount++;
+
+        // one second elapsed? (= 1000 milliseconds)
+        if (m_fpsinterval.value() > 1000)
+        {
+            // save the current counter value to m_fps
+            m_fps         = m_fpscount;
+           
+            // reset the counter and the interval
+            m_fpscount    = 0;
+            m_fpsinterval = Interval();
+        }
+    }
+
+    // Get fps
+    unsigned int get() const
+    {
+        return m_fps;
+    }
+};

@@ -1,0 +1,5 @@
+youtube.library.update({
+    recource: library,
+    part: 'liked videos',
+    auth: auth,
+});

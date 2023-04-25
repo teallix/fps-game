@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" class="github-dark" data-color-mode="dark" data-dark-theme="dark">
+    <head>
+        <script>
+            performance.mark('code/didStartRenderer');
+        </script>
+        <script nonce="wu21wWnk4Vl783T91P4pZw==">
+            if (document.documentElement.classList.contains('unknown-theme')) {
+                if (!!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.replace('unknown-theme', 'github-dark');
+                    document.documentElement.setAttribute('data-color-mode', 'dark');
+                    document.documentElement.setAttribute('data-dark-theme', 'dark');
+                } else {
+                    document.documentElement.classList.replace('unknown-theme', 'github-light');
+                    document.documentElement.setAttribute('data-color-mode', 'light');
+                    document.documentElement.setAttribute('data-dark-theme', 'light');
+                }
+            }
+        </script>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="
+        upgrade-insecure-requests;
+        block-all-mixed-content;
+        default-src &#x27;none&#x27;;
+        base-uri &#x27;self&#x27;;
+        manifest-src
+            &#x27;self&#x27;
+            https://vscodeweb.azureedge.net/
+            https://main.vscode-cdn.net/
+            https://github.dev/
+        https://assets.github.dev/
+        ;
+        style-src
+            &#x27;self&#x27;
+            &#x27;unsafe-inline&#x27;
+            https://vscodeweb.azureedge.net/
+            https://main.vscode-cdn.net/
+            https://*.vscode-unpkg.net/
+            https://github.dev/
+        https://assets.github.dev/
+        ;
+        img-src
+            &#x27;self&#x27;
+            https:
+            data:
+            blob:
+            vscode-remote-resource:
+            https://github.dev/
+        https://assets.github.dev/
+        ;
+        connect-src
+            &#x27;self&#x27;
+        https://assets.github.dev/
+            wss://vsls-prod-ins-usw2-private-relay.servicebus.windows.net
+            wss://vsls-prod-rel-usw2-relay-1.servicebus.windows.net
+            wss://vsls-prod-rel-usw2-relay-2.servicebus.windows.net
+            wss://vsls-prod-rel-usw2-relay-3.servicebus.windows.net
+            wss://vsls-prod-rel-usw2-relay-4.servicebus.windows.net
+            wss://vsls-prod-ins-usw3-private-relay.servicebus.windows.net
+			wss://vsls-prod-ins-use-private-relay.servicebus.windows.net
+            wss://vsls-prod-rel-use-relay-1.servicebus.windows.net
+            wss://vsls-prod-rel-use-relay-2.servicebus.windows.net
+            wss://vsls-prod-rel-use-relay-3.servicebus.windows.net
+            wss://vsls-prod-rel-use-relay-4.servicebus.windows.net
+            wss://vsls-prod-ins-use2-private-relay.servicebus.windows.net
+			wss://vsls-prod-ins-asse-private-relay.servicebus.windows.net
+            wss://vsls-prod-rel-asse-relay-1.servicebus.windows.net
+            wss://vsls-prod-rel-asse-relay-2.servicebus.windows.net
+            wss://vsls-prod-rel-asse-relay-3.servicebus.windows.net
+            wss://vsls-prod-rel-asse-relay-4.servicebus.windows.net
+			wss://vsls-prod-ins-eun-private-relay.servicebus.windows.net
+            wss://vsls-prod-ins-euw-private-relay.servicebus.windows.net
+            wss://vsls-prod-rel-euw-relay-1.servicebus.windows.net
+            wss://vsls-prod-rel-euw-relay-2.servicebus.windows.net
+            wss://vsls-prod-rel-euw-relay-3.servicebus.windows.net
+            wss://vsls-prod-rel-euw-relay-4.servicebus.windows.net
+            wss://vsls-prod-ins-uks-private-relay.servicebus.windows.net
+            wss://vsls-prod-ins-aue-private-relay.servicebus.windows.net
+            https://management.preview.app.github.dev/api/v1/PortForwardingConnections
+            https://prod.liveshare.vsengsaas.visualstudio.com
+        https://insiders.liveshare.vsengsaas.visualstudio.com
+            https://*.rel.tunnels.api.visualstudio.com
+            http://*.dev.core.vsengsaas.visualstudio.com
+                https://*.gallerycdn.vsassets.io
+                https://vortex.data.microsoft.com/collect/v1
+                https://vscode-sync.trafficmanager.net/
+                https://vscode-sync-insiders.trafficmanager.net/
+                https://vscode-sync-test.trafficmanager.net/
+                https://marketplace.visualstudio.com/_apis/public/gallery/
+                https://az764295.vo.msecnd.net/experiments/vscode-experiments.json
+                https://vscodeexperiments.azureedge.net/experiments/vscode-experiments.json
+                https://vscodeweb.azureedge.net/insider/
+                https://vscodeweb.azureedge.net/stable/
+                https://main.vscode-cdn.net/insider/
+                https://main.vscode-cdn.net/stable/
+                https://default.exp-tas.com/vscode/ab
+                https://code.visualstudio.com/raw/
+                https://vscode-auth.github.com
+                https://*.gallery.vsassets.io/_apis/public/gallery/
+                https://*.vscode-unpkg.net/
+                https://github-cloud.githubusercontent.com/alambic/media/
+                https://bingsettingssearch.trafficmanager.net/
+                https://vscode.search.windows.net/
+                https://vscode.blob.core.windows.net/gallery/index/
+                https://marketplace.visualstudio.com/items/
+                https://az764295.vo.msecnd.net/extensions/marketplace.json
+                https://az764295.vo.msecnd.net/extensions/workspaceRecommendations.json.gz
+                https://*.review-lab.github.com
+                https://update.code.visualstudio.com/api/
+                https://mobile.events.data.microsoft.com/
+            https://api.github.com/
+        ;
+        font-src
+            &#x27;self&#x27;
+            https://main.vscode-cdn.net/insider/
+            https://main.vscode-cdn.net/stable/
+            https://vscodeweb.azureedge.net/insider/
+            https://vscodeweb.azureedge.net/stable/
+            https://*.vscode-unpkg.net/
+            vscode-remote-resource:
+            https://github.dev/
+        https://assets.github.dev/
+        ;
+        frame-src
+            &#x27;self&#x27;
+            https://*.webview.codespaces.githubusercontent.com/webview/
+        https://*.assets.github.dev/
+            https://*.vscode-webview-test.com
+                https://*.vscode-webview.net
+                https://*.vscode-cdn.net/
+                https://vscodeweb.azureedge.net/
+                https://*.preview.app.github.dev/
+        ;
+        media-src
+            https://main.vscode-cdn.net/insider/
+            https://main.vscode-cdn.net/stable/
+        ;
+        worker-src
+            https://teallix-solid-garbanzo-x69jqj775gqc964x.github.dev/service-worker.js
+        blob:
+        ;
+        child-src
+            https://teallix-solid-garbanzo-x69jqj775gqc964x.github.dev/service-worker.js
+            blob:
+        ;
+        require-trusted-types-for
+            &#x27;script&#x27;
+        ;
+        script-src
+            &#x27;self&#x27;
+            &#x27;nonce-wu21wWnk4Vl783T91P4pZw==&#x27;
+            &#x27;unsafe-eval&#x27;
+            https://vscodeweb.azureedge.net/
+            https://main.vscode-cdn.net/
+            https://github.dev/
+        https://assets.github.dev/
+        ;
+        trusted-types
+            default
+            dompurify
+            TrustedFunctionWorkaround
+            ExtensionScripts
+            amdLoader
+            cellRendererEditorText
+            defaultWorkerFactory
+            diffEditorWidget
+            editorGhostText
+            domLineBreaksComputer
+            editorViewLayer
+            diffReview
+            extensionHostWorker
+            insane
+            notebookRenderer
+            safeInnerHtml
+            standaloneColorizer
+            tokenizeToString
+            webNestedWorkerExtensionHost
+            webWorkerExtensionHost
+            stickyScrollViewLayer
+        ;
+    "/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-title" content="Code"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <meta name="publicBaseUrl" content="https://assets.github.dev"/>
+        <link rel="shortcut icon" href="https://github.githubassets.com/favicon.ico" id="js-favicon"/>
+        <link rel="manifest" href="/static/manifest.json">
+        <link rel="apple-touch-icon" href="https://assets.github.dev/static/apple-icon.png">
+        <link rel="stylesheet" href="https://assets.github.dev/static/primer.css" id="js-primer-css">
+        <link rel="stylesheet" href="https://assets.github.dev/static/splash-screen-styles.css" id="js-splash-screen-css">
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-bn.js.029d22b3d726534d8ee0.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-index.js.241ce5f81ec161e7e1e3.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-source-map-consumer.js.87a578e48687e5c7ddf4.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-main.js.5526871b85cfe1ab0a5f.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-_stream_readable.js.6c6322349c0dbd1d6adf.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-secp256k1.js.a27343013d6efa10573a.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-minimatch.js.44cb4685c2170a6cfa78.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-browser.js.9c5fa8f60cbdb16a77a8.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-short.js.238b7955f17426c4e6e9.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-_stream_writable.js.df6f8141076f377c7bef.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-sha256.js.1ae319f02fdbf20fbe72.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~bootstrap~pfHelper-source-map-support.js.0ef686319ee2536314b4.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-moment.js.28528bc442c92a3e89c4.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-HttpManager.js.5831d39d6c07086406a0.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-PostChannel.js.818c0dc2291ce88db149.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-dynamicproto-js.js.e11318260e9ad0271ad9.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-BaseCore.js.8173d173658661fbe9d2.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-HelperFuncs.js.7e4389d93d67b7717845.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-EventHelpers.js.2ecf00c66f128dac5764.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-ProcessTelemetryContext.js.b853677d6eb901b25638.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app~pfHelper-Utils.js.a37d0aceffa44eb5bc9b.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-index.js.ee367a384e8082ad1641.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-utils.js.515cc02e3ffe66228a7c.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-events.js.99a4105a419b168db2e2.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-util.js.629aee0741f89450a812.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-assert.js.0c8b8671053f0d7505cb.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-linkedMap.js.f30728d0fb75e369aa8c.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-sshSessionConfiguration.js.9a555c2602ab697daef4.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-sshSession.js.f6ea02ef21f506892001.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-keyExchangeService.js.5ac4ed951c2a9ccb5be2.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-sshProtocol.js.cd3104c1d9ff3f5c5555.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-xterm.js.3c429705809b3e8d161a.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-react-dom.production.min.js.a35f98a0b0c8ee8404a2.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-google-protobuf.js.9955a15ab001faecaec2.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-VSLS.js.7b8339b4aee437bb854a.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/commons-app-CodespaceHostService.v1_pb.js.ff80006470ce106aad18.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/836.969eea5ec39da52bdb44.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/779.cb536a1d6dd7bb0cc772.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/521.3943e624e0392d000e7c.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/489.2dee576c8d410b610a2a.js"></script>
+        <link href="https://assets.github.dev/static/app.2f478b802a45cf7d1db1.js" rel="preload" as="script">
+        <script defer="defer" src="https://assets.github.dev/static/964.da085526f8d126d8dda4.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/bootstrap.9a55bc939d7e692fd794.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/351.c6a6745567bb201721f4.js"></script>
+        <script defer="defer" src="https://assets.github.dev/static/pfHelper.c6edcd787a2582fbfba1.js"></script>
+        <style>
+            body,html {
+                margin: 0;
+                padding: 0;
+                font-size: 10px
+            }
+        </style>
+    </head>
+    <body>
+        <div id="js-vscode-workbench">
+            <div class="cs-workbench-page">
+                <div class="cs-workbench-page__body">
+                    <div class="cs-splash-screen" id="js-default-loading-screen">
+                        <div class="container" id="js-default-loading-screen-container">
+                            <div class="steps-pane">
+                                <div class="main-title pt-8">
+                                    <h4>Setting up your codespace</h4>
+                                </div>
+                                <div class="terminal-array">
+                                    <div class="first terminal-container"></div>
+                                    <div class="second terminal-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="js-partner-info" style="display:none">eyJzZXJ2ZXJDb3JyZWxhdGlvbklkIjoiMTBjNjE1YmQtNjE2Zi00ZDU2LTg3NTMtZGQwZGM3ZGJlMTc0Iiwid29ya2JlbmNoVHlwZSI6ImNvZGVzcGFjZXMiLCJmZWF0dXJlRmxhZ3MiOnsiZGV2ZWxvcGVyIjpmYWxzZSwicG9ydEZvcndhcmRpbmdTZXJ2aWNlRW5hYmxlZCI6dHJ1ZSwidXNlU3RvcmFnZVYyIjpmYWxzZSwiZW5hYmxlUmVtb3RlS2VybmVsIjpmYWxzZSwidXNlRmFzdGx5Q2RuIjp0cnVlLCJ1c2VOZXdQZnNEb21haW4iOnRydWUsImdycGNXZWIiOmZhbHNlLCJydW5Qb3N0QXR0YWNoQ29tbWFuZHMiOmZhbHNlLCJ1c2VCYXNpc1BvcnRGb3J3YXJkaW5nIjpmYWxzZSwicmVtb3ZlRXh0cmFQZlR1bm5lbGluZyI6dHJ1ZSwidXNlQmFzaXNQb3J0Rm9yd2FyZGluZ1dlYlVybCI6ZmFsc2UsInVzZUJhc2lzUG9ydEZvcndhcmRpbmdXZWJVcmxGYWxsYmFjayI6ZmFsc2UsImRldGFpbGVkQWN0aXZpdHlNb25pdG9yIjp0cnVlLCJzZXR0aW5nc1N5bmMiOmZhbHNlLCJ2c2NvZGVBY2NvdW50U3dpdGNoaW5nIjpmYWxzZSwic2V0dGluZ3NTeW5jVGVzdFNlcnZlciI6ZmFsc2UsImRpc2FibGVMaXZlU2hhcmVScGMiOmZhbHNlfSwid29ya2JlbmNoQ29uZmlnIjp7InZzY29kZVZlcnNpb25JbmZvIjp7Imluc2lkZXIiOnsiY29tbWl0IjoiMjkwMmYyNzhhZDhlMmQ4MzBmYTY4ODNkM2Q4ZmQ3YjVjMmNhNTllOSIsInByb2R1Y3RWZXJzaW9uIjoiMS43OC4wLWluc2lkZXIifSwic3RhYmxlIjp7ImNvbW1pdCI6IjcwNGVkNzBkNGZkMWM2YmQ2MzQyYzQzNmYxZWRlMzBkMWNmZjQ3MTAiLCJwcm9kdWN0VmVyc2lvbiI6IjEuNzcuMyJ9fSwidmVyc2lvbiI6IjAuMS4wMjMwMy40NTYtNzZiN2ZhNTUiLCJlbnZpcm9ubWVudCI6IlByb2R1Y3Rpb24iLCJzZXJ2aWNlTG9jYXRpb24iOiJFYXN0VVMiLCJzZXJ2aWNlSW5zdGFuY2UiOiJwcm9kLXJlbC1FYXN0VVMiLCJpS2V5IjoiZjc3MmZmYWEwMTJlNGZjNmJiMGEyNDVkZDE3NmZjNmMtY2E2MzU4YmUtMGI4NS00ZTc0LWFkZTEtYzc4NTdkZDdkOGM5LTczOTQifX0=</div>
+    </body>
+</html>

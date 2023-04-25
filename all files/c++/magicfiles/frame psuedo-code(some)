@@ -1,0 +1,25 @@
+// we need one Fps object stored globally
+Fps fps;
+
+void onGameUpdate()
+{
+    // update player movement
+    // ...
+   
+    // update monster ai
+    // ...
+   
+    // add special effects
+    // ...
+   
+    // update frames per second
+    fps.update();
+}
+
+void processInput()
+{
+    // print out the fps if f12 was pressed
+    if (keyPressed("F12")) {
+        std::cout<<"Fps: "<<fps.get()<<'\n';
+    }
+}

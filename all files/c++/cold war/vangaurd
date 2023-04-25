@@ -1,0 +1,42 @@
+import time
+    
+def releases():
+    print("release = avaliable for purchase; $")
+    time.sleep(2)
+    print("release = verb: allow or enable to escape from confinement; set free.")
+    time.sleep(2)
+    vanguard()
+    
+    
+def vanguard():
+    print("vanguard = Call Of Duty series ww2 game released in 2021 containing zombies, multiplayer, ranked play, and campaign")
+    time.sleep(3)
+    print("(loss{4(21{4})})//underline: 'vangaurd'")
+    time.sleep(2)
+    print("error 308, n:(loss{14}) lag: 400, packet loss: 28%")
+    time.sleep(2)
+    print("|25% carried (*2*) to pl: 28%|")
+    time.sleep(2)
+    print("exiting terminal in...")
+    time.sleep(1)
+    print("3")
+    time.sleep(1)
+    print("2")
+    time.sleep(1)
+    print("1")
+    time.sleep(3)
+    quit()
+    
+    
+def ui():
+    name = input("so, your name...\n")
+    
+    print("yo, so " +name+ ", here is the vanguard schedule")
+    time.sleep(2)
+    print("vanguard beta: Friday, September 10th, to Monday, September 13th")
+    time.sleep(3)
+    print("vanguard release: November 5, 2021")
+    time.sleep(2)
+    releases()
+    
+ui()
