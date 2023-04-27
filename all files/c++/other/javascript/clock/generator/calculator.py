@@ -13,7 +13,7 @@ def subtract(x, y):
     return x - y
     
 while True:
-    ai = input("Multiply[1], Divide[1], Add[3], or Subtract[4]?\n")
+    ai = input("Multiply[1], Divide[2], Add[3], or Subtract[4]?\n")
     
     if ai == "2":
         def aid():
