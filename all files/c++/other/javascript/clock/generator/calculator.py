@@ -15,21 +15,21 @@ def subtract(x, y):
 while True:
     ai = input("Multiply[1], Divide[2], Add[3], or Subtract[4]?\n")
     
-    if ai == "2":
+    if ai == "1":
         def aid():
             num1 = int(input("Enter first number"))
             num2 = int(input("Enter second number"))
             
-            print(num1, "/", num2, "=", divide(num1, num2))
+            print(num1, "*", num2, "=", multiply(num1, num2))
             
         aid()
         
-    elif ai == "1":
+    elif ai == "2":
         def ais():
             num1 = int(input("Enter first number"))
             num2 = int(input("Enter second number"))
             
-            print(num1, "*", num2, "=", multiply(num1, num2))
+            print(num1, "/", num2, "=", divide(num1, num2))
             
         ais()
         
