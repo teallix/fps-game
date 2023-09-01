@@ -19,7 +19,7 @@
 // Weapons:
 // Have base, default weapons unlocked from the start for default
 // Have with every new weapon, a new challenge to unlock it[easy challenge]
-// Have every weapon have a custom, different camo
+// Have every weapon have custom, different camo[s]
 // Have[when completed], xp granted when unlocking a new weapon
 
 // Progression:
@@ -29,6 +29,7 @@
 // Character Customization:
 // Have the ability to customize everything from the head, to the feet
 // Have[in-store], a character part to change on character for each and every character[when bought or achieved]
+// Have camo[s] that can be equipped on characters
 
 // Store:
 // Have bundles including: weapons, weapon camos, skin customization, weapon leveling, and more for in-game currency
@@ -176,11 +177,11 @@
 // Have upgrade station for weapons
 // Have different factions with different backstories and connections
 
-// Anti cheat(relentless):
-// Have anti cheat detect cheaters and hackers
-// Have anti cheat counter-measures for innocent players(if a hacker is detected make the other players be invisible and not take damage from the cheater and either temporarily ban or permanently ban the cheater or hacker after the game)
+// Anti-cheat(relentless):
+// Have anti-cheat detect cheaters and hackers
+// Have anti-cheat counter-measures for innocent players(if a hacker is detected make the other players be invisible and not take damage from the cheater and either temporarily ban or permanently ban the cheater or hacker after the game)
 // Have a report button for people to report cheaters or hackers
-// After a certain amount of reports, either look into account, ban(temporarily or permanently), or punish in various ways for humiliation
+// After a certain amount of reports, either look into the account, ban(temporarily or permanently), or punish in various ways for humiliation
 // When a cheater is found and banned/punished, rid the leaderboard of that impersonated humiliation
 
 // Anti-cheat counter-measures:
@@ -193,7 +194,7 @@
 // Polarfire zombies
 
 // Copyright:
-// These documents, and the content inside, is hereby given the permission of the owner to be used by anyone obtaining a copy of the document[s]
+// These documents, and the content inside, are hereby given the permission of the owner to be used by anyone obtaining a copy of the document[s]
 // However, that permission is not granted to change, edit, or delete any part or section from these documents
 // If the user wishes to use the document[s] in a paper, essay, etc., the user must give credit to the owner of the document[s]
 // Any music used we do not have the rights to and anyone pertaining to this game is not allowed to use the music unless owned by that particular person[s]
