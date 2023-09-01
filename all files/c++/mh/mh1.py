@@ -1554,9 +1554,9 @@ def case():
     quit()
     
 def lines():
-    print("there are 1554 line of code in this game")
+    print("there are 1572 line of code in this game")
     time.sleep(3)
-    print("33561 characters")
+    print("34166 characters")
     time.sleep(3)
     print("this project took 1 month to make, january 23 - february 21 2023")
     time.sleep(3)
