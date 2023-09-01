@@ -1511,6 +1511,21 @@ def code():
         print(".,:;error occurred")
         time.sleep(3)
         quit()
+
+    elif userInput == "4629936":
+        print("/code_correct")
+        time.sleep(2)
+        print("force/nuke")
+        time.sleep(2)
+        print("3...")
+        time.sleep(1)
+        print("2...")
+        time.sleep(1)
+        print("1...")
+        time.sleep(3)
+        print("launch successful")
+        time.sleep(2)
+        quit()
     
     else:
         print("incorrect")
