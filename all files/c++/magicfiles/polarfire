@@ -1,38 +1,39 @@
 // Main:
 // Have a login page
 // Have profiles and profile editing
-// Have profiles levels and rewards
+// Have profile levels and rewards
 // Have modes and weapon smith
 // Have weapon levels and camos and camo tracking
 // Have skins and skin customization
-// Have store for optional purchasing
+// Have a store for optional purchasing
 // Have microtransactions(optional for user)
 // Have custom game modes and maps
 // Have tournament modes
-// Have a main page for what the game is about and game modes are about
+// Have a main page for what the game is about and what game modes are about
 // Allow cross-play
 // Allow cross-matchmaking
-// Have a terms and conditions for players to read and understand and agree to
-// Have a server list to choose from; example; na central, na east, asia west, asia, east, na west, central, etc.
+// Have terms and conditions for players to read understand and agree to
+// Have a server list to choose from; for example; na central, na east, asia west, asia, east, na west, central, etc.
 // Have game be $20.00 - $30.00[based on country]
 
 // Weapons:
 // Have base, default weapons unlocked from the start for default
 // Have with every new weapon, a new challenge to unlock it[easy challenge]
 // Have every weapon have custom, different camo[s]
-// Have[when completed], xp granted when unlocking a new weapon
+// Have[when completed], XP granted when unlocking a new weapon
 
 // Progression:
-// Have a basic leveling system for when an amount of xp is obtained
-// Have when a certain level is reached, grant the player a camo, lethal, tactical, weapon, or streak based on the level
+// Have a basic leveling system for when an amount of XP is obtained
+// When a certain level is reached, grant the player a camo, lethal, tactical, weapon, or streak based on the level
+// Have certain rewards[ex: camos, special weapons, and more xp] granted when reaching milestone levels[ex: 50, 100, 150, 200, etc]
 
 // Character Customization:
-// Have the ability to customize everything from the head, to the feet
+// Have the ability to customize everything from the head to the feet
 // Have[in-store], a character part to change on character for each and every character[when bought or achieved]
 // Have camo[s] that can be equipped on characters
 
 // Store:
-// Have bundles including: weapons, weapon camos, skin customization, weapon leveling, and more for in-game currency
+// Have bundles including weapons, weapon camos, skin customization, weapon leveling, and more for in-game currency
 // Have a basic micro-transaction system[with purchasable currency]
 
 // Characters:
@@ -43,7 +44,7 @@
 // Have a very good [in-game]camo challenge tracker accounting for usage of different abilities at the time and different settings at the time
 // Have a different ability camo tracker for in-game tracking with precision-sight accuracy at challenges done during the game
 // Have a camo challenge completion icon in-game detailing the specific challenge done with the camo and weapon
-// Have xp granted when camo challenge done
+// Have XP granted when the camo challenge[s] [are/is] done
 // Have custom camo[s] the players can make and import
 
 // Perk[s]/Perk System:
@@ -55,8 +56,8 @@
 // Have every gun be able to put all attachment slots on their weapon
 // Have vastly different attachments for every weapon, with different traits/pros/cons coming with them
 
-// Xp:
-// grant the player xp when; elimination, match won, enemy special destroyed, assist, vehicle destroyed, camo unlocked, special unlocked, character unlocked, weapon unlocked, control over objective, objective completed, objective held, use/usage of special, elimination with lethal, certain amount of time played, challenge completed, and level gained
+// XP:
+// grant the player XP when; elimination, match won, enemy special destroyed, assist, vehicle destroyed, camo unlocked, special unlocked, character unlocked, weapon unlocked, control over objective, objective completed, objective held, use/usage of special, elimination with lethal, certain amount of time played, challenge completed, and level gained
 
 // Sound Effects:
 // Have sound effects for; elimination, headshot elimination, footstep[s], lethal[s], tactical[s], camo challenge[s] completed, weapon challenge[s] completed, button[s] pressed, option[s] chosen, music, setting[s] pressed, special[s] used, bundle[s]/item purchased, weapon sound[s], error[s] occurred, level[s] gained, objective[s] held/captured/controlled, game trailer[s], enemy weapon[s]/lethal[s]/tactical[s] used, dialogue, zombie sound[s], login, logout, account deleted, purchase canceled, cutscene[s], player[s] banned, rank up, affect[s] from bullet/blood/gore/wall bang/destruction, option exited, hovering over an object/option, jumping, sliding, crouching, and more
@@ -70,11 +71,13 @@
 // Different languages found in settings
 
 // Ranked:
-// Have a ranked mode with reward in which players can compete in
-// Have a simple and easy rank-system from winning/losing/kills in games
+// Have a ranked mode with rewards in which players can compete in
+// Have a simple and easy rank system from winning/losing/kills in games
 
 // Streaks:
-// When player gets a certain amount of score, have the player get a streak from it
+// Have either[optional] kill streaks or score streaks
+// When a player gets a certain amount of score, have the player get a streak from it
+// When a player gets a certain kill streak, have the player get a streak from it
 
 // Leaderboard:
 // Have the top 500 players in the game listed
@@ -95,8 +98,8 @@
 // Bright, colorful, and vibrant colors for a nice look and feel
 
 // Bugs and glitches:
-// Constant bug tests and glitch test every addition to the game
-// Any in-game bugs and glitches[whether it`s login, security, anticheat, leveling, camo tracking and progression, or more] need to be patched asap in open alpha and open beta before the whole game is released
+// Constant bug tests and glitch tests with every addition to the game
+// Any in-game bugs and glitches[whether it`s login, security, anti-cheat, leveling, camo tracking and progression, or more] need to be patched asap in open alpha and open beta before the whole game is released
 
 // Feedback:
 // Have a monthly feedback page for players to give us their feedback
@@ -104,21 +107,21 @@
 // Have a feedback button people can press to give feedback on the game
 
 // Updates:
-// Constant updates including: weapons, patches, maps, game modes, and more customization and features every week[along with bug and glitch testing for each update]
+// Constant updates including weapons, patches, maps, game modes, and more customization and features every week[along with bug and glitch testing for each update]
 
 // Settings:
-// Have a basic settings for advanced options for the player to choose from
+// Have basic settings for advanced options for the player to choose from
 
 // Lethals/Tacticals:
-// Have base lethals: example: thermite, powertine, jubulizer
+// Have base lethals: example: thermite, powertine, nebulizer
 // Have advanced lethals
-// Have base tacticals: example: stun, stabilizer, jugi
+// Have base tacticals: example: stun, stabilizer, polarfire
 // Have advanced tacticals
 
 // Ai:
-// Have intelligent and not overpowered ai for different game modes
-// Have the ai play a tactical playstyle
-// Do not make the ai have stupid overpowered aim
+// Have intelligent and not overpowered AI for different game modes
+// Have the AI play a tactical playstyle
+// Do not make the AI have a stupid overpowered aim
 // Have ai(bots) for private and offline games
 
 // Graphics:
@@ -128,7 +131,7 @@
 // Affects:
 // Have blood and gore when shot/eliminated
 // Have explosion effects on nearby structures
-// Have color affects when using special equipment/specials/special abilities
+// Have color effects when using special equipment/specials/special abilities
 
 // Soundtrack:
 // Ask for samples from Activision Black Ops Cold War
@@ -146,26 +149,26 @@
 // Voice Chat:
 // Allow voice Chat
 // Allow push-to-talk
-// Have a in-game and in-party typing chat
+// Have an in-game and in-party typing chat
 
 // Reports:
-// Allow player to report someone for: cheating, glitch/bug abusing, inappropriate language, promoting terrorism, and more[with custom message if player chooses to]
+// Allow player to report someone for cheating, glitch/bug abusing, inappropriate language, promoting terrorism, and more[with a custom message if player chooses to]
 
 // Funding/Sponsoring:
 // Sell items and toys along with other things for money and funding
-// Get sponsors to support and advertise game
+// Get sponsors to support and advertise the game
 
 // Animations:
 // Different animations for climbing, sliding, flying, falling, shot at, eliminated, special abilities, and more
 
 // Game engine:
 // Unreal engine for a fast and accurate engine
-// If Unreal engine doesn`t work, then we will make our own
+// If the Unreal engine doesn`t work, then we will make our own
 
 // Multiplayer:
 // Allow cross-play
 // Allow cross-matchmaking
-// Have different game modes and game playing options
+// Have different game modes and game-playing options
 
 // Zombies:
 // Have several different maps with many easter eggs in each
