@@ -3,7 +3,7 @@ import time
 
 
 def main():
-   name = input("Please tell me your name...")
+   name = input("Please tell me your name...\n")
    print("Welcome to your Adventure Game " +name+ "!")
       
    print("It is a cold, dark world, Jan 5 2048. "  +name+  " was shot")
