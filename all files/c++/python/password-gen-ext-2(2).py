@@ -187,14 +187,14 @@ while True:
                                                     try:
                                                         f = open("demo.txt", encoding="utf-8") # actually doesn't work, delete the "" and it will give an error, leave them and it will also give an error
                                                         try: # i hate when codespaces desides not to work
-                                                            f.write("This is the demo")
-                                                        except NameError:
+                                                            f.write("This is the demo file") # remember to use the "demo.txt" file in /python folder
+                                                        except NameError: # have to put NameError because it will give an error if i don't
                                                             print("Something is wrong")
                                                         finally:
                                                             f.close("demo.txt")
                                                     except NameError:
-                                                        print("Something went wrong when opening the file")
-                                                    def far():
+                                                        print("Something went wrong when opening the file") # still have to use the NameError
+                                                    def far(): # What python version is this smh
                                                         vf = input("")
                                                         
                                                         if vf == "yes":
