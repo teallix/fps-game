@@ -1,7 +1,0 @@
-import time
-import collections
-
-counter = 1
-while True:
-    
-    print("", time.time())

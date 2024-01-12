@@ -1,0 +1,5 @@
+youtube.shorts.update({
+    recource: short,
+    part: 'snippet',
+    auth: auth,
+});

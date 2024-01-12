@@ -1,0 +1,76 @@
+<html lang="en"><head><style>body {transition: opacity ease-in 0.2s; } 
+    body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+    </style><style type="text/css"></style>[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+        <meta charset="utf-8"><!--removed @charset "UTf-8"; from "text/css"> and [ng\:cloak]-->
+        <!-- <title>{{ appName }}</title> -->
+        <title>Harnessing Human Energy</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- Disallow zooming. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+        <!-- Allow the app to be added to the home screen on iOS devices. -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+        
+    
+        <link rel="stylesheet" href="css/all.css?t=1652445081091">
+    
+        <!-- auto incremented during the build step -->
+        <meta name="version" content="1.2.0">
+    
+    </head>
+    <body ng-controller="ampAuthorizationController" ng-init="entitlementKey = '59756012-E9C8-438A-8754-4EFFBA76930B'; checkLanguageAccess = ['spanish'];" data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="" class="ng-scope">
+        <script type="text/javascript" src="https://my.amplify.com/auth/js/keycloak.min.js"></script><script src="js/body.js?t=1652445081091"></script>
+        <script src="bower_components/amp-language-toggle/dist/dependencies.min.js?t=1652445081091"></script>
+        <script src="bower_components/amp-language-toggle/dist/amp-language-toggle-es5.min.js?t=1652445081091"></script>
+    
+            <div ng-controller="MainController" class="ng-scope">
+    
+                <canvas controller="SimController" id="sim" state="simState" class="ng-isolate-scope" width="811" height="651" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas>
+    
+                <div id="mainContainer" ng-transclude="" class="ng-scope">
+                    <div id="topControlBar" ng-show="simState.modeIndex != 2" class="ng-scope"><div class="topbarCenterContainer" ng-transclude="">
+    
+                        <div ng-show="simState.modeIndex == 1 || simState.modeIndex == 3" class="ng-scope ng-hide">
+                         <div class="sliderLabel ng-binding ng-isolate-scope" translate="ENERGY_LABELS">Energy Labels</div>
+                         <div class="sliderContainer">
+                                <div class="scienceSliderContainer ng-isolate-scope ng-pristine ng-valid" style="width: 40px; height: 12px" id="labelSlider" ng-model="simState.labelSliderValue" min="0" max="1" snap-to="true" labels="['']" width="40px" height="12px" value-changed-stopped="notifyLabelSliderValueChangeStopped()" slider-move-direction="notifyLabelSliderDirectionChange(direction, 5)" step="2" ng-show="simState.showlabelToggle"><div class="scienceSliderBackground" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="scienceSliderInnerContainer"><div class="scienceSliderFill" style="transform: translateX(0px);"></div></div><div class="scienceSliderKnob" draggable="true" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); transform: translate3d(17.5px, 0px, 0px);"></div></div><div class="sliderLabelsContainer"><!-- ngRepeat: label in labels --><div class="sliderLabel ng-binding ng-scope" style="left: 0px;" ng-repeat="label in labels"></div><!-- end ngRepeat: label in labels --></div></div>
+                            </div>
+    
+                        <div class="playModeControls ng-hide" ng-show="simState.modeIndex == 1 || simState.modeIndex == 3">
+                            <div ng-show="simState.modeIndex == 3" class="ng-hide">
+                                <button class="topbarButton play ng-isolate-scope" ng-show="!simState.isPlaying" ng-click="pressTogglePlayPauseSim()" embed-file="{backgroundImage: 'images/globalNavigation/play_control-play.png'}" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAbCAMAAABP9I/XAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACEUExURUxpcaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpUtnFHQAAAArdFJOUwBY/RTz1LrSoQY4R7jHAiv53yDp7Bb+C5Gg94CPE2+yEn5uDLFfXjL1M/ZQ3mjdAAAAfklEQVQoz5XSSRKCQBBEUQS0wQFRFOcJHIB///sZ4s7ORZnLF7Xorsrg5ZpkHXhxwOrpcckn0+UP801cZYphNpdMfksVw3AsmfC4UQyLiWTYXSVTDCTDPZLMSPP+n+lLZH5JcrL+MtzW1g3mh9R6nficWS7f9+Th9aR1nWjVG7spOobWd1YqAAAAAElFTkSuQmCC&quot;);">
+                                </button>
+                                <button class="topbarButton pause ng-isolate-scope ng-hide" ng-show="simState.isPlaying" ng-click="pressTogglePlayPauseSim()" embed-file="{backgroundImage: 'images/globalNavigation/play_control-pause.png'}" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAbBAMAAACD78KsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAVUExURUxpcaWlpaWlpaWlpaWlpaWlpaWlpYkndpkAAAAGdFJOUwDmSUrn5OR7aQUAAAAtSURBVBjTY1BME2JgYACRYmmJQBaITEtLA7JA5HBmiaWlgP2bwmCSFgxkAUkAGQo9g2zHR9gAAAAASUVORK5CYII=&quot;);">
+                                </button>
+                                <div class="tooltipContainer" ng-mouseover="updateTooltip()">
+                                    <span id="preciseNumbers" title=""></span>
+                                </div>
+                            </div>
+    
+                            <button class="topbarButton reset ng-isolate-scope" ng-click="pressPlayReset()" embed-file="{backgroundImage: 'images/globalNavigation/play_control-replay.png'}" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAfCAYAAACCox+xAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAC00lEQVRYw9XYX4hVVRTH8c+9o0KRDiKVDxNEkPbQHygqzcAggogoIutlEWUyT74FQUER1UNCJOKLMA0G0obessYb9hfEggrGxnDEiSAiHxzU/v9j1OrhnKHbac947rn3xR/cl7XO3vd71ll77bV3SwOllNbgQazH9bgUF+MvzGIGH2NfRHxWZ85WjwB34xls6GHYDLbh9Yg42xdISulKjOGuJhEsNYUtEXGoEUgZhTcw3AfEvOawNSLGq472eSA24e0BQcAyvJpSeqp2RFJKG/E+li7wyG/Yiw8wjR+wAldhIx7C5YtAjXZHJguSUlqFI1idcZ/FdrwUET8u8iLLMIoXsTLzyBzWRcQX0EoprYqI05VJxrElM3gW90XE53W/RUpppIzcTRn3IdwSEedaKaVp/IwO3sGf+BJDlUEncVtEfF0XogtmGB/hxoz70YjY08Z+rCtDOInDGQh4uAkERMRPuF+RR1U9SbFqOhXHkszD0zjVBKIL5jiezbiuTSnd3EopLcVpLK8x33eKz9eJiIleYcoE/tb/F8Hz7Yg4g/dqznUFHpdfBXWiMqcojlXdPl/Q9tWc6xfcGxF7moCUOpCxXTOfD/vxt8VL/izuWWiv6EEzGdvqdhmyE4oVs5C+wvoBQMAfGdtQ917TWWDgp9gQEd8MAAIuytjOdYPk8mQCd0ZEX0u3orUZ24lukElFHsxrDA9ExO8DhIA7MrZj/0nOlNJreAzPRcQLAwZYtI5Uq+heHIyI3YOGKDUqv6N3eupZ+4zGiGIzrRbDIxFxXbvBnE0ghvGWfEV+mfO0igOMxIfyLcAkEvW7+CHsxGZFmd+FHQPo0G6NiKleQJ7AKxXzr3izfNuj+F7RZDfqWZeop9yB6hI8Uv561dPVI0XdHDnc4M9ymisjsa3qqAuyHe/2CTGl2DjHc84L6+ybAbrav7cBN+Ayxa7afRvwCSbq3gb8A/LQ5MVmK1TuAAAAAElFTkSuQmCC&quot;);">
+                            </button>
+                        </div>
+                        </div>
+    
+                         <div class="levelSelectDirective ng-scope ng-isolate-scope" level-header="getLocalizedAppName()" level-panel-is-open="levelSelectPanelVisibilityChanged(isOpen)" categories="categories" level-selected="levelSelected(level)" is-app-online="isAppOnline" remove-header-upper-casing="false"><button class="topbarButton levelSelect" ng-click="setLevelPanelVisible(!showLevelPanel)"></button><div class="fullScreenGrey ng-hide" ng-show="showLevelPanel" ng-click="setLevelPanelVisible(false)"></div><div id="levelPanel" class="sideControlPanel animateLevelPanel levelPanelHide" ng-class="{levelPanelHide: !showLevelPanel}"><div class="levelSelectHeader ng-binding upperCaseHeader" ng-class="{'upperCaseHeader': !removeHeaderUpperCasing}">Harnessing Human Energy</div><button class="topbarLevelCloseButton" ng-click="setLevelPanelVisible(false)"></button><div class="categories-container"><div class="categories"><!-- ngRepeat: cat in categories --><div class="category"><div class="category-name ng-binding" ng-hide="hideOthers">Other</div><!-- ngRepeat: link in links --><!-- ngIf: isAppOnline --><div class="levels ng-scope" ng-if="isAppOnline"><button class="logout-button ng-binding" ng-click="logoutSelected()">Log Out</button></div><!-- end ngIf: isAppOnline --></div></div></div><!-- ngIf: showHorizontalBarAboveCredits --><div id="credits" class="credits"><div class="contained"><div id="copyright" class="ng-binding">© The Regents of the University of California. All rights reserved.</div><div id="terms" ng-bind-html="renderHtmlDescription('TERMS')" class="ng-binding">Use of the app is subject to Amplify’s <a href="http://www.amplify.com/user-terms" target="_blank">Terms of Use</a> and <a href="http://www.amplify.com/customer-privacy" target="_blank">Privacy Policy</a>.</div><!-- ngIf: showCredits() --></div><div class="version ng-binding">v 1.2.0</div></div></div><div ng-show="isVisible" class="creditsPanelDirective ng-isolate-scope ng-hide" credits="credits"><div class="creditsBackground"><p class="amplify">Amplify.</p><span class="close-icon" ng-click="close()"></span><div class="creditsSection"><div id="creditsPanel" class="creditsPanel allow-scroll-on-mobile"><!-- ngRepeat: credit in credits --></div></div></div></div></div>
+    
+                    </div></div>
+    
+                    <science-about-panel version="v 1.20.0" class="ng-scope"></science-about-panel>
+    
+    
+    
+                </div>
+                <!-- ngIf: showSpanishToggle --><div class="language-toggle-container ng-scope" ng-if="showSpanishToggle" ng-class="{'language-toggle-container-hidden': simState.isLSMOpen}">
+                    <label aria-live="assertive" id="aria-language-toggle">Language Toggle Button</label>
+                    <div class="language-toggle-wrapper ng-isolate-scope" user-business-key="5bc634f8-e7e7-40a0-a7fd-660ebc419c86" class-ids="[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;]" default-language="EN" aria-label-id="aria-language-toggle" is-app-online="isAppOnline" is-user-read-only="isUserReadOnly" languages="EN, ES"><amp-ui-language-toggle initial-data-props="{&quot;id&quot;:&quot;language-toggle&quot;,&quot;languages&quot;:&quot;EN, ES&quot;,&quot;ariaLabelId&quot;:&quot;aria-language-toggle&quot;,&quot;defaultLanguage&quot;:&quot;EN&quot;,&quot;classIds&quot;:[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;],&quot;isAppOnline&quot;:true,&quot;toggleType&quot;:&quot;teacher-toggle&quot;,&quot;isUserReadOnly&quot;:false,&quot;userBusinessKey&quot;:&quot;5bc634f8-e7e7-40a0-a7fd-660ebc419c86&quot;}" <="" amp-ui-language-toggle=""></amp-ui-language-toggle></div>
+                </div><!-- end ngIf: showSpanishToggle -->
+                <div class="loading ng-isolate-scope ng-hide" ng-show="show" show="!simState.loadingDone"><div class="loadingContainer"><label class="ampliftyText">Amplify.</label><div class="spinner"></div></div></div>
+    
+            </div>
+    
+    
+    
+    <iframe src="https://my.amplify.com/auth/realms/Amplify/protocol/openid-connect/login-status-iframe.html" title="keycloak-session-iframe" style="display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

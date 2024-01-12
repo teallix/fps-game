@@ -1,0 +1,120 @@
+<html ng-app="thermal" class="ng-scope" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style><style>body {transition: opacity ease-in 0.2s; } 
+    body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+    </style>
+        <meta charset="utf-8">
+        <title translate="LEVEL_HEADER" class="ng-binding ng-isolate-scope">Thermal Energy</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+    
+        <!-- Disallow zooming. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+        <!-- Allow the app to be added to the home screen on iOS devices. -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+        <link rel="stylesheet" href="css/all.css?t=1651758246206">
+    
+        <!-- auto incremented during the build step -->
+        <meta name="version" content="1.1.0">
+    </head>
+    <body ng-controller="ampAuthorizationController" class="ng-scope" data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="">
+        <script type="text/javascript" src="https://my.amplify.com/auth/js/keycloak.min.js"></script><script src="bower_components/amp-language-toggle/dist/dependencies.min.js?t=1651758246206"></script>
+        <script src="bower_components/amp-language-toggle/dist/amp-language-toggle-es5.min.js?t=1651758246206"></script>
+        <script src="js/body.js?t=1651758246206"></script>
+        
+        <div ng-controller="MainCtrl" class="simPage language-EN" style="min-width: 768px; min-height: 576px">
+            
+            <!-- preload assets -->
+            <div class="preloadFontsHack">
+                <span class="preloadBentonsansLightFont">1</span>
+                <span class="preloadBentonsansMediumFont">1</span>
+                <span class="preloadBentonsansBoldFont">1</span>
+                <span class="preloadBentonsansBookFont">1</span>
+                <div class="preloadImages"></div>
+            </div>
+            <div class="loading ng-isolate-scope ng-hide" ng-show="show" show="!simState.loadingDone || !loggedIn"><div class="loadingContainer"><label class="ampliftyText">Amplify.</label><div class="spinner"></div></div></div>
+            <div id="mainContainer" ng-transclude="" class="ng-scope">
+    
+                <div id="topControlBar" class="ng-scope"><div class="topbarCenterContainer" ng-transclude="">
+                    <div class="modeSelect ng-scope">
+                        <button class="runMode active" ng-disabled="simState.simMode === 1" ng-class="{'active' : simState.simMode === 1}" ng-click="setSimMode(1)" disabled="disabled">
+                            <span translate="RUN" class="ng-binding ng-isolate-scope">Run</span>
+                        </button>
+                        <button class="analyzeMode" ng-disabled="simState.simMode === 2 || simState.simTime === 0" ng-class="{'active' : simState.simMode === 2, 'pulse' : simState.simTime !==0 &amp;&amp; !simState.activatedAnalyzeMode}" ng-click="setSimMode(2)" disabled="disabled">
+                            <span translate="ANALYZE" class="ng-binding ng-isolate-scope">Analyze</span>
+                            <div class="modeSelectConnector" ng-class="{'active' : simState.simMode === 2}"></div>
+                        </button>
+                    </div>
+                    
+                    <div class="substanceTypeIcon ng-scope ng-hide" ng-show="showSubstanceIcon() &amp;&amp; initialSetupCompleted &amp;&amp; selectedSubstanceType">
+                        <label class="headerLabel ng-binding">Substance:</label>
+                        <div id="substanceIcon"></div>
+                        <label class="substanceLabel ng-binding">SAMPLE</label>
+                    </div>
+                    
+                    <!-- ngIf: initialSetupCompleted && substanceContainerInitialized -->
+                </div></div>
+    
+                <div id="contentContainer" ng-transclude="" class="ng-scope">
+                    <div id="canvasContainer" class="ng-scope">
+    
+                    <canvas width="811" height="651" style="cursor: inherit;"></canvas></div>
+                    
+                    <div id="graphContainer" ng-class="{'visible': simState.simMode === 2}" class="ng-scope">
+                        <canvas controller="GraphController" id="graph" state="simState" class="ng-isolate-scope" width="811" height="358" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas>
+                        <div class="graphLineTogglesContainer" ng-show="simState.isGraphWithinResponsiveDesign">
+                            <div class="graphlineToggle ng-hide" ng-show="simState.graphlineVisibility[0].show">
+                                <div class="toggleText ng-binding">Sample A</div>
+                                <div class="switchContainer ng-isolate-scope ng-pristine ng-valid" ng-model="simState.graphlineVisibility[0].lineVisible" on-value-changed="graphlineVisibilityToggled(0)" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="switchBackground"></div><p class="switchOnText ng-binding"></p><p class="switchOffText ng-binding"></p><div class="switchTab" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;"></div></div>
+                            </div>
+                            <div class="graphlineToggle ng-hide" ng-show="simState.graphlineVisibility[1].show">
+                                <div class="toggleText ng-binding">Sample B</div>
+                                <div class="switchContainer ng-isolate-scope ng-pristine ng-valid" ng-model="simState.graphlineVisibility[1].lineVisible" on-value-changed="graphlineVisibilityToggled(1)" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="switchBackground"></div><p class="switchOnText ng-binding"></p><p class="switchOffText ng-binding"></p><div class="switchTab" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;"></div></div>
+                            </div>
+                            <div class="graphlineToggle ng-hide" ng-show="simState.graphlineVisibility[2].show">
+                                <div class="toggleText ng-binding">Sample C</div>
+                                <div class="switchContainer ng-isolate-scope ng-pristine ng-valid" ng-model="simState.graphlineVisibility[2].lineVisible" on-value-changed="graphlineVisibilityToggled(2)" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="switchBackground"></div><p class="switchOnText ng-binding"></p><p class="switchOffText ng-binding"></p><div class="switchTab" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="initialSetupPanel ng-scope ng-hide" ng-show="initialSetupCompleted === false">
+                    <div class="fullScreenGrey"></div>
+                    <div class="setupPanel">
+                        <div class="substancePanel">
+                            <div class="title ng-binding ng-isolate-scope" translate="PLEASE_SELECT_A_SUBSTANCE">Please select a type of substance</div>
+                            <input type="radio" id="substanceBrick" name="substanceType" ng-click="setupSubstance(1)"><label class="brickSubstance ng-binding ng-isolate-scope" for="substanceBrick" translate="BRICK">Brick</label>
+                            <input type="radio" id="substanceIron" name="substanceType" ng-click="setupSubstance(0)"><label class="ironSubstance ng-binding ng-isolate-scope" for="substanceIron" translate="IRON">Iron</label>
+                            <input type="radio" id="substanceWood" name="substanceType" ng-click="setupSubstance(2)"><label class="woodSubstance ng-binding ng-isolate-scope" for="substanceWood" translate="WOOD">Wood</label>
+                        </div>
+                        <button class="confirmButton ng-binding ng-isolate-scope" ng-disabled="!initialSetupReady" ng-click="confirmSubstance()" translate="CONFIRM" disabled="disabled">confirm</button>
+                    </div>
+                </div>
+                
+                <div id="containerMassPanel" class="containerMassPanel ng-scope ng-hide" ng-show="massSelectObj.showUI === true">
+                    <div class="fullScreenGrey" ng-click="cancelMassSelect()"></div>
+                    <div class="setupPanel">
+                        <button class="closeButton" ng-click="cancelMassSelect()"></button>
+                        <div class="massPanel">
+                            <div class="title ng-binding ng-isolate-scope" translate="PLEASE_SELECT_A_SIZE">Please select a size for the sample</div>
+                            <input type="radio" id="smallMass1" name="massType" ng-click="selectMass(0)"><label class="smallMass ng-binding ng-isolate-scope" for="smallMass1" translate="SMALL">Small</label>
+                            <input type="radio" id="mediumMass1" name="massType" ng-click="selectMass(1)"><label class="mediumMass ng-binding ng-isolate-scope" for="mediumMass1" translate="MEDIUM">Medium</label>
+                            <input type="radio" id="largeMass1" name="massType" ng-click="selectMass(2)"><label class="largeMass ng-binding ng-isolate-scope" for="largeMass1" translate="LARGE">Large</label>
+                        </div>
+                        <button class="confirmButton ng-binding ng-isolate-scope" ng-disabled="!massSelectObj.massSelected" ng-click="confirmMassSelect()" translate="CONFIRM" disabled="disabled">confirm</button>
+                    </div>
+                </div>
+                
+                <div class="levelSelectDirective ng-scope ng-isolate-scope" level-header="getLevelHeader()" level-panel-is-open="levelSelectPanelVisibilityChanged(isOpen)" categories="categories" level-selected="levelSelected(level)"><button class="topbarButton levelSelect" ng-click="setLevelPanelVisible(!showLevelPanel)"></button><div class="fullScreenGrey ng-hide" ng-show="showLevelPanel" ng-click="setLevelPanelVisible(false)"></div><div id="levelPanel" class="sideControlPanel animateLevelPanel levelPanelHide" ng-class="{levelPanelHide: !showLevelPanel}"><div class="levelSelectHeader ng-binding upperCaseHeader" ng-class="{'upperCaseHeader': !removeHeaderUpperCasing}">Thermal Energy</div><button class="topbarLevelCloseButton" ng-click="setLevelPanelVisible(false)"></button><div class="categories-container"><div class="categories"><!-- ngRepeat: cat in categories --><div class="category ng-scope" ng-repeat="cat in categories"><div class="category-name ng-binding">Modes</div><div class="levels"><!-- ngRepeat: lev in cat.levels | filter: {show: true} --><div class="level ng-scope" ng-repeat="lev in cat.levels | filter: {show: true}"><button class="level-name ng-scope ng-binding selected" element-mouse-hover="" ng-class="{selected: lev.selected}" ng-click="selectLevel(lev, $event)">Generic Substance</button></div><!-- end ngRepeat: lev in cat.levels | filter: {show: true} --><div class="level ng-scope" ng-repeat="lev in cat.levels | filter: {show: true}"><button class="level-name ng-scope ng-binding" element-mouse-hover="" ng-class="{selected: lev.selected}" ng-click="selectLevel(lev, $event)">Different Substances</button></div><!-- end ngRepeat: lev in cat.levels | filter: {show: true} --></div></div><!-- end ngRepeat: cat in categories --><div class="category"><div class="category-name ng-binding" ng-hide="hideOthers">Other</div><!-- ngRepeat: link in links --><!-- ngIf: isAppOnline --><div class="levels ng-scope" ng-if="isAppOnline"><button class="logout-button ng-binding" ng-click="logoutSelected()">Log Out</button></div><!-- end ngIf: isAppOnline --></div></div></div><!-- ngIf: showHorizontalBarAboveCredits --><div id="credits" class="credits"><div class="contained"><div id="copyright" class="ng-binding">© The Regents of the University of California. All rights reserved.</div><div id="terms" ng-bind-html="renderHtmlDescription('TERMS')" class="ng-binding">Use of the app is subject to Amplify’s <a href="http://www.amplify.com/user-terms" target="_blank">Terms of Use</a> and <a href="http://www.amplify.com/customer-privacy" target="_blank">Privacy Policy</a>.</div><!-- ngIf: showCredits() --></div><div class="version ng-binding">v 1.1.0</div></div></div><div ng-show="isVisible" class="creditsPanelDirective ng-isolate-scope ng-hide" credits="credits"><div class="creditsBackground"><p class="amplify">Amplify.</p><span class="close-icon" ng-click="close()"></span><div class="creditsSection"><div id="creditsPanel" class="creditsPanel allow-scroll-on-mobile"><!-- ngRepeat: credit in credits --></div></div></div></div></div>
+                
+            </div>
+            <!-- ngIf: showLanguageToggle --><div class="language-toggle-container ng-scope" ng-if="showLanguageToggle" ng-class="{'language-toggle-container-hidden': simState.isLSMOpen}">
+                <label aria-live="assertive" id="aria-language-toggle">Language Toggle Button</label>
+                <div class="language-toggle-wrapper ng-isolate-scope" user-business-key="5bc634f8-e7e7-40a0-a7fd-660ebc419c86" class-ids="[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;]" default-language="EN" aria-label-id="aria-language-toggle" languages="EN, ES" is-user-read-only="isUserReadOnly"><amp-ui-language-toggle initial-data-props="{&quot;id&quot;:&quot;language-toggle&quot;,&quot;languages&quot;:&quot;EN, ES&quot;,&quot;ariaLabelId&quot;:&quot;aria-language-toggle&quot;,&quot;defaultLanguage&quot;:&quot;EN&quot;,&quot;classIds&quot;:[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;],&quot;isAppOnline&quot;:true,&quot;toggleType&quot;:&quot;teacher-toggle&quot;,&quot;isUserReadOnly&quot;:false,&quot;userBusinessKey&quot;:&quot;5bc634f8-e7e7-40a0-a7fd-660ebc419c86&quot;}" <="" amp-ui-language-toggle=""></amp-ui-language-toggle></div>
+            </div><!-- end ngIf: showLanguageToggle -->
+        </div>
+    
+    
+    <iframe src="https://my.amplify.com/auth/realms/Amplify/protocol/openid-connect/login-status-iframe.html" title="keycloak-session-iframe" style="display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

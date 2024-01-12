@@ -1,0 +1,146 @@
+<html lang="en"><head><style>body {transition: opacity ease-in 0.2s; } 
+    body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+    </style><style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+        <meta charset="utf-8"><!--removed @charset "UTF-8"; from "text/css" and [ng\:cloak]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="format-detection" content="telephone=no">
+    
+    
+        <title translate="TITLE" class="ng-binding ng-isolate-scope">Scale Tool</title>
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+        <!-- Disallow zooming. -->
+        <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1,user-scalable=no">
+    
+        <!-- Allow the app to be added to the home screen on iOS devices. -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+        
+    
+        <link rel="stylesheet" href="css/all.css?t=1652452184448">
+    
+        <!-- auto incremented during the build step -->
+        <meta name="version" content="1.0.0">
+    
+        <link rel="apple-touch-icon" href="images/icons/Icon-60@2x.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/icons/Icon-60@3x.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/icons/Icon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/icons/Icon-76@2x.png">
+        <link rel="apple-touch-icon" sizes="58x58" href="images/icons/Icon-Small@2x.png">
+        <script type="text/javascript" src="https://my.amplify.com/auth/js/keycloak.min.js"></script><script src="code/jquery-2.1.1.min.js?t=1652452184448"></script>
+        <script src="code/jquery.mobile.custom.min.js?t=1652452184448"></script>
+    </head>
+    
+    <body data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="">
+        <div style="font-family: BentonSans-Book; visibility: hidden;">.</div>
+        <div style="font-family: BentonSans-Bold; visibility: hidden;">.</div>
+    
+        <script src="js/body.js?t=1652452184448"></script>
+    
+        <script src="bower_components/amp-language-toggle/dist/dependencies.min.js?t=1652452184448"></script>
+        <script src="bower_components/amp-language-toggle/dist/amp-language-toggle-es5.min.js?t=1652452184448"></script>
+    
+        <div>
+            <div id="theMain" ng-controller="MainController" class="ng-scope">
+                <!-- ngIf: !isAppInited -->
+                <!-- ngIf: isAppInited --><div class="appContent ng-scope" ng-if="isAppInited">
+                  <div class="mainViewContainer">
+    
+        <canvas id="mainViewCanvas" ng-show="! isSmallActive" width="1024px" height="544px" ng-click="onCanvasClick( $event )" class=""></canvas>
+    
+        <canvas id="smallCanvas" ng-show="isSmallActive" width="320px" height="170px" ng-click="onCanvasClick( $event )" class="ng-hide"></canvas>
+    
+        <div class="sliderBackgroundContainer ng-isolate-scope ng-pristine ng-valid" ng-style="getSliderStyle()" min="-16" max="27" ng-model="sliderValue" on-slider-move="onSliderMove()" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACAAAAAEJCAMAAAA37jcZAAAAqFBMVEUzMzMbGxsZGRkqKipcXFySkpImJiYyMjI0NDQ7OzssLCwgICBmZmZSUlJ9fX08PDyNjY1LS0tERESDg4OIiIhgYGBiYmJycnJ4eHhsbGxZWVn/bihmkv/SAP8A8yos4v//IbD///9VVVU5OTk1NTU3Nzc6OjoaGho2NjYfHx84ODgkJCQdHR1gT08nJycpKSkcHBwiIiIoKCgrKysxMTEwMDAhISElJSWf7xEqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMTgtMDktMjhUMTY6MTc6MDQtMDQ6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDE4LTEwLTA5VDE2OjQz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&quot;);">
+        <div class="labels">
+            <!-- ngRepeat: label in sliderLabels --><div class="label electron" "="" ng-repeat="label in sliderLabels" translate="SLIDER.ELECTRON">electron</div><!-- end ngRepeat: label in sliderLabels --><div class="label atom" "="" ng-repeat="label in sliderLabels" translate="SLIDER.ATOM">atom</div><!-- end ngRepeat: label in sliderLabels --><div class="label cell" "="" ng-repeat="label in sliderLabels" translate="SLIDER.CELL">cell</div><!-- end ngRepeat: label in sliderLabels --><div class="label human" "="" ng-repeat="label in sliderLabels" translate="SLIDER.HUMAN">human</div><!-- end ngRepeat: label in sliderLabels --><div class="label earth" "="" ng-repeat="label in sliderLabels" translate="SLIDER.EARTH">Earth</div><!-- end ngRepeat: label in sliderLabels --><div class="label milky-way" "="" ng-repeat="label in sliderLabels" translate="SLIDER.MILKY_WAY">Milky Way</div><!-- end ngRepeat: label in sliderLabels --><div class="label observable-universe" "="" ng-repeat="label in sliderLabels" translate="SLIDER.OBSERVABLE_UNIVERSE">observable universe</div><!-- end ngRepeat: label in sliderLabels -->
+        </div>
+        <div class="slider" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+            <div class="sliderThumbContainer unselectable" ng-style="{
+                    transform: 'translate(' + sliderOffset + 'px)'
+                 }" style="transform: translate(290.803px);">
+    
+                <div class="thumbImage unselectable" ng-style="getSliderThumbStyle()" style="background-image: url(&quot;data:image/png;base64,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&quot;);"></div>
+                <div class="thumbLabel unselectable">
+                    10<sup id="sliderTextHolder" class="ng-binding"> 0 </sup>
+                    <span translate="SLIDER.METERS" class="ng-binding ng-isolate-scope">meters</span>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
+        <div class="fullScreenTransparent" ng-class="{ active: isPopupActive }" ng-click="onScreenClick( $event )"></div>
+    
+        <div class="informationPopup ng-hide" ng-show="isPopupActive" ng-click="onPopupWindowClick( $event )" ng-style="getPopupStyle()" style="left: 0px; top: 0px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATEAAAD+CAMAAABlcsKPAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAMoaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAyMSA3OS4xNTU3NzIsIDIwMTQvMDEvMTMtMTk6NDQ6MDAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQwQ0U0RDJDMkU0ODExRTVBNkQwQjgxOTNBRTU0RUIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQwQ0U0RDJEMkU0ODExRTVBNkQwQjgxOTNBRTU0RUIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDBDRTREMkEyRTQ4MTFFNUE2RDBCODE5M0FFNTRFQjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDBDRTREMkIyRTQ4MTFFNUE2RDBCODE5M0FFNTRFQjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4D3x61AAAAGXRFWHRTb2Z0d2FyZQBB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&quot;);">
+    
+        <div class="popupTitleContainer">
+            <div class="popupTitleText ng-binding ng-isolate-scope" translate="EMPTY_STRING">EMPTY_STRING</div>
+        </div>
+    
+        <div class="closeButton" ng-click="closePopup()"></div>
+    
+        <div class="popupBody">
+            <div class="popupSubTitle ng-binding"> <span translate="EMPTY_STRING" class="ng-binding ng-isolate-scope">EMPTY_STRING</span></div>
+            <div class="popupSubTitle ng-binding"> <span translate="EMPTY_STRING" class="ng-binding ng-isolate-scope">EMPTY_STRING</span></div>
+            <div class="popupText ng-binding" ng-bind-html="renderTranslatedHtml(popupText)">EMPTY_STRING</div>
+        </div>
+    </div>
+    
+    </div>
+                  <!-- ngIf: isAppInited --><level-select-menu ng-if="isAppInited" level-header="TITLE" level-panel-is-open="levelSelectPanelVisibilityChanged(isOpen)" categories="categories" level-selected="levelSelected(level)" is-app-online="isAppOnline" class="ng-scope ng-isolate-scope"><div class="levelSelectDirective">
+        <button class="topbarButton levelSelect" ng-style="getLevelButtonStyle()" ng-click="setLevelPanelVisible(!showLevelPanel)" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAMkaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjUwODJGMjM5N0U2MTFFNDhCRDY5NTU3MEMyQzQ3QjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjUwODJGMjQ5N0U2MTFFNDhCRDY5NTU3MEMyQzQ3QjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGNTA4MkYyMTk3RTYxMUU0OEJENjk1NTcwQzJDNDdCNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGNTA4MkYyMjk3RTYxMUU0OEJENjk1NTcwQzJDNDdCNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pp/G8UMAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAWlBMVEVMaXEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjJmZmYyMjJhYWFBQUFgYGA7ZnLCAAAAGXRSTlMAUvxs5Qtu5r7+UfvrbwxyClfser15VFm/qQkPIAAAAKZJREFUWMPtl8kOwjAQQ502W0sp+zYN//+bpCoci2gscYDx3U8axYc8IMfVx04WprvWDs+0QYoS2qm/aaQwzWnsm+J+zg7YBqIvwcELlTUiB4iwHGCPFQcQiAIU8KuANNzmMqRPAPP9TPgK4M0J96Q70CXqEhWgS9QlKuAPAOR3v2KFw/LKQ0uXY7UPZ0Y8L6T6HiZ5NqXybV763vtoq4Xvb6Pvx+4D6CGW1PZzRWYAAAAASUVORK5CYII=&quot;);">
+        </button>
+        <div class="fullScreenGrey ng-hide" ng-show="showLevelPanel" ng-click="setLevelPanelVisible(false)"></div>
+        <div id="levelPanel" class="sideControlPanel animateLevelPanel levelPanelHide" ng-class="{levelPanelHide: !showLevelPanel}">
+                <div class="levelSelectHeader ng-binding ng-isolate-scope" translate="TITLE">Scale Tool</div>
+                <button class="topbarLevelCloseButton" ng-style="getLevelCloseButtonStyle()" ng-click="setLevelPanelVisible(false)" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAByUExURUxpcaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoSWsJ0kAAAAldFJOUwBQUfpPQkb59UDq9FRE6UlTPk09+0FL4ErfP+RO8/hS4udM9uGFWOz2AAAAi0lEQVRIx+3USRqCMAyG4RSQIgoyqODAIJD7X5E2XuDPwo1Pv/W7aZuUKPT3XbbSwLixzDmKE4f5AWLjcfbEcCT4gOFJgyvBRxDHCnwWXIP46vAJxIngFrzol8MDiumjOCHR26q46hnVXMYvK37EG+Epyhcdv3u+3lDee97hKz8yl/gPkc65oVDo2w7YaA2VdhNmfgAAAABJRU5ErkJggg==&quot;);">
+                </button>
+                <div class="categories-container">
+                    <div class="categories">
+                        <!-- ngRepeat: cat in categories -->
+                        <!-- ngIf: isAppOnline --><div class="category ng-scope" ng-if="isAppOnline">
+                            <div class="category-name ng-binding ng-isolate-scope" ng-hide="hideOthers" translate="SIDE_MENU.OTHER">Other</div>
+                            <div class="levels">
+                                <button class="logout-button ng-binding ng-isolate-scope" ng-click="logoutSelected()" translate="SIDE_MENU.LOG_OUT">Log Out</button>
+                            </div>
+                        </div><!-- end ngIf: isAppOnline -->
+                    </div>
+                </div>
+    
+                <!-- ngIf: showHorizontalBarAboveCredits -->
+    
+                <div id="credits" class="credits">
+                    <div class="contained">
+    
+                        <div id="copyright" translate="SIDE_MENU.COPYRIGHT" class="ng-binding ng-isolate-scope">© The Regents of the University of California. All rights reserved.</div>
+    
+                        <div id="terms">
+                            <span translate="SIDE_MENU.USE_OF_APP" class="ng-binding ng-isolate-scope">Use of the app is subject to Amplify’s</span>
+                            <a href="http://www.amplify.com/user-terms" target="_blank" translate="SIDE_MENU.TERMS_OF_USE" class="ng-binding ng-isolate-scope">Terms of Use</a>
+                            <span translate="SIDE_MENU.AND" class="ng-binding ng-isolate-scope">and</span>
+                            <a href="http://www.amplify.com/customer-privacy" target="_blank" translate="SIDE_MENU.PRIVACY_POLICY" class="ng-binding ng-isolate-scope">Privacy Policy</a>.
+                        </div>
+    
+                        <!-- ngIf: showCredits() -->
+    
+                    </div>
+    
+                    <div class="version ng-binding">
+                       <span translate="SIDE_MENU.VERSION" class="ng-binding ng-isolate-scope">v</span> 1.30.0
+                    </div>
+    
+                </div>
+        </div>
+    </div>
+    </level-select-menu><!-- end ngIf: isAppInited -->
+                </div><!-- end ngIf: isAppInited -->
+                <!-- ngIf: showSpanishToggle --><div class="language-toggle-container ng-scope" ng-if="showSpanishToggle">
+                    <label aria-live="assertive" id="aria-language-toggle">Language Toggle Button</label>
+                    <div class="language-toggle-wrapper ng-isolate-scope" user-business-key="5bc634f8-e7e7-40a0-a7fd-660ebc419c86" class-ids="[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;]" default-language="EN" is-user-read-only="isUserReadOnly" is-app-online="isAppOnline" aria-label-id="aria-language-toggle" languages="EN, ES"><amp-ui-language-toggle initial-data-props="{&quot;id&quot;:&quot;language-toggle&quot;,&quot;languages&quot;:&quot;EN, ES&quot;,&quot;ariaLabelId&quot;:&quot;aria-language-toggle&quot;,&quot;defaultLanguage&quot;:&quot;EN&quot;,&quot;classIds&quot;:[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;],&quot;isAppOnline&quot;:true,&quot;toggleType&quot;:&quot;teacher-toggle&quot;,&quot;isUserReadOnly&quot;:false,&quot;userBusinessKey&quot;:&quot;5bc634f8-e7e7-40a0-a7fd-660ebc419c86&quot;}" <="" amp-ui-language-toggle=""></amp-ui-language-toggle></div>
+                </div><!-- end ngIf: showSpanishToggle -->
+            </div>
+        </div>
+    
+    
+    <iframe src="https://my.amplify.com/auth/realms/Amplify/protocol/openid-connect/login-status-iframe.html" title="keycloak-session-iframe" style="display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

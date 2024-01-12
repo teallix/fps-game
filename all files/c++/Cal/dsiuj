@@ -1,0 +1,6 @@
+import time
+
+counter = 1
+while True:
+    
+    print("", time.time())

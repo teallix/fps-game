@@ -1,0 +1,15 @@
+fn main() {
+    println!("Hello, World!");
+}
+
+fn lol() {
+    println!("Hi, I'm trying rust");
+}
+
+fn bruh() {
+    println!("Rust is so confusing");
+}
+
+fn lmao() {
+    println!("I don't know if I want to learn rust anymore");
+}

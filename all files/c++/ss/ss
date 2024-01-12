@@ -1,0 +1,6 @@
+import time
+
+result = time.localtime(1212008008)
+print("result:", result)
+print("\nyear:", result.tm_year)
+print("tm_hour:", result.tm_hour)

@@ -1,0 +1,400 @@
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style><style>body {transition: opacity ease-in 0.2s; } 
+    body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+    </style>
+            <meta charset="utf-8">
+            <title translate="TITLE" class="ng-binding ng-isolate-scope">Light Waves</title>
+            <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+            <!-- Disallow zooming. -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.333984375, maximum-scale=1, user-scalable=no">
+    
+            <!-- Allow the app to be added to the home screen on iOS devices. -->
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+            <link rel="stylesheet" href="css/all.css?t=1651677446860">
+    
+            <!-- auto incremented during the build step -->
+            <meta name="version" content="1.1.0">
+        </head>
+    
+        <body data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="">
+            <script type="text/javascript" src="https://my.amplify.com/auth/js/keycloak.min.js"></script><script src="bower_components/amp-language-toggle/dist/dependencies.min.js?t=1651677446860"></script>
+            <script src="bower_components/amp-language-toggle/dist/amp-language-toggle-es5.min.js?t=1651677446860"></script>
+    
+        <script src="js/body.js?t=1651677446860"></script>
+    
+            
+    
+            <div id="imagesController" ng-controller="imagesController" class="ng-scope">
+    
+                <loading-page class="ng-scope"><div class="loading ng-hide" ng-hide="areAllImagesLoaded()">
+    
+        <div class="loadingContainer">
+            <div class="amplifyText"></div>
+            <div class="spinner"></div>
+        </div>
+    
+    </div>
+    </loading-page>
+    
+                <!-- ngIf: areAllImagesLoaded() --><div id="mainContainer" class="unselectable language-EN" ng-if="areAllImagesLoaded()" ng-controller="MainController" ipad-content-adjustment="" window-focus="">
+    
+                    <!-- preload assets -->
+                    <div class="preloadFontsHack">
+                        <span class="preloadBentonsansBookFont">1</span>
+                    </div>
+    
+                    <interactions-view ng-show="currentView === 'interactionsView'" class="ng-scope"><div class="interactionsViewContainer">
+    
+        <div class="fogImage" ng-show="checkBeamsVisible()" style="top: 287px; left: 520px; width: 839px; height: 449px;"></div>
+    
+        <canvas id="interactionsViewCanvas" width="1024" height="654" ng-click="onCanvasClick( $event )"></canvas>
+    
+    
+        <div class="sourceContainer" style="top: 263px; left: 25px; width: 364px; height: 288px;">
+            <div class="sources">
+                <!-- ngRepeat: sourceItem in getSources() --><div ng-repeat="sourceItem in getSources()" class="source sun selected" ng-class="{ selected: sourceItem.id === getSource().id }" ng-click="selectSource( $index  )">
+    
+                    <div class="sourceName sun isActive" ng-class="{isActive: checkIsSourceActive(sourceItem)}">
+                        <div translate="SOURCES.SUN" class="ng-binding ng-isolate-scope">Sun</div>
+                        <div class="laserLightLabel ng-binding ng-isolate-scope ng-hide green" ng-class="getLaserSliderLightType().id" ng-show="( getSource().id === 'laser' &amp;&amp; sourceItem.id === 'laser' )" translate="SOURCES.GREEN">Green</div>
+                    </div>
+                </div><!-- end ngRepeat: sourceItem in getSources() --><div ng-repeat="sourceItem in getSources()" class="source lightBulb" ng-class="{ selected: sourceItem.id === getSource().id }" ng-click="selectSource( $index  )">
+    
+                    <div class="sourceName lightBulb" ng-class="{isActive: checkIsSourceActive(sourceItem)}">
+                        <div translate="SOURCES.LIGHT_BULB" class="ng-binding ng-isolate-scope">Light bulb</div>
+                        <div class="laserLightLabel ng-binding ng-isolate-scope ng-hide green" ng-class="getLaserSliderLightType().id" ng-show="( getSource().id === 'laser' &amp;&amp; sourceItem.id === 'laser' )" translate="SOURCES.GREEN">Green</div>
+                    </div>
+                </div><!-- end ngRepeat: sourceItem in getSources() --><div ng-repeat="sourceItem in getSources()" class="source laser" ng-class="{ selected: sourceItem.id === getSource().id }" ng-click="selectSource( $index  )">
+    
+                    <div class="sourceName laser" ng-class="{isActive: checkIsSourceActive(sourceItem)}">
+                        <div translate="SOURCES.LASER" class="ng-binding ng-isolate-scope">Laser</div>
+                        <div class="laserLightLabel ng-binding ng-isolate-scope ng-hide green" ng-class="getLaserSliderLightType().id" ng-show="( getSource().id === 'laser' &amp;&amp; sourceItem.id === 'laser' )" translate="SOURCES.GREEN">Green</div>
+                    </div>
+                </div><!-- end ngRepeat: sourceItem in getSources() --><div ng-repeat="sourceItem in getSources()" class="source custom" ng-class="{ selected: sourceItem.id === getSource().id }" ng-click="selectSource( $index  )">
+    
+                    <div class="sourceName custom" ng-class="{isActive: checkIsSourceActive(sourceItem)}">
+                        <div translate="SOURCES.CUSTOM" class="ng-binding ng-isolate-scope">Custom</div>
+                        <div class="laserLightLabel ng-binding ng-isolate-scope ng-hide green" ng-class="getLaserSliderLightType().id" ng-show="( getSource().id === 'laser' &amp;&amp; sourceItem.id === 'laser' )" translate="SOURCES.GREEN">Green</div>
+                    </div>
+                </div><!-- end ngRepeat: sourceItem in getSources() -->
+            </div>
+    
+            <div class="laserSlider ng-hide" ng-class="{ exploded: checkLaserSliderExploded()  }" ng-show="isWavelengthsSliderVisible()">
+                <div class="background" ng-class="{ exploded: checkLaserSliderExploded()  }"></div>
+                <div class="knobContainer">
+                    <div class="knob" ng-style="getLaserSliderKnobStyle()" ng-class="{ exploded: checkLaserSliderExploded() }" style="left: 50%;">
+                        <div class="circle green"></div>
+                        <div class="image"></div>
+                    </div>
+                </div>
+                <div class="click" utils-touch="onLaserSliderTouch( type, event )" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+            </div>
+    
+            <div class="customLightLabel ng-binding ng-isolate-scope ng-hide" ng-show="( getSource().id === 'custom' )" translate="SOURCES.GAMMA_RAY">Gamma Ray</div>
+    
+            <div class="editCustomLightButton ng-binding ng-isolate-scope ng-hide" ng-click="onEditCustomLightButtonClick()" ng-show="getSource().id === 'custom'" translate="BUTTONS.EDIT_WAVE">Edit wave</div>
+    
+            <div class="playButton" ng-click="onPlayButtonClick( $event )">
+                <div class="background" ng-class="{isOn: isSimStarted() }"></div>
+                <div class="labelsContainer">
+                    <div class="offLabel ng-binding ng-isolate-scope" translate="RAY_SWITCH.OFF">Off</div>
+                    <div class="onLabel ng-binding ng-isolate-scope" translate="RAY_SWITCH.ON">On</div>
+                    <div class="indicator" ng-class="{isOn: isSimStarted() }"></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- ngRepeat: placeholder in getMaterialPlaceholders() --><div class="materialPlaceholder ng-scope" ng-repeat="placeholder in getMaterialPlaceholders()" ng-style="getMaterialPlaceholderStyle( placeholder )" material-placeholder-index="0" style="top: 413.745px; left: 737.148px; width: 77.9732px; height: 77.9732px;">
+    
+    
+            <div class="materialInteractionButton ng-hide" ng-click="onMaterialPlaceholderClick( placeholder )" ng-show="checkIsMaterialInteractionButtonVisible( placeholder )">
+    
+                <div class="interactionButtonIcon"></div>
+                <div class="interactionButtonText ng-binding ng-isolate-scope" translate="BUTTONS.INSPECT">Inspect</div>
+            </div>
+            <div class="materialProxy ng-isolate-scope ui-draggable ui-draggable-handle isDisabled" ng-class="{
+                     isDisabled: isPlaceholderProxyDisabled( placeholder ),
+                     isDragging: placeholder === dragPlaceholder,
+                 }" material-placeholder-index="0" utils-drag="onMaterialPlaceholderDrag( eventType, pos, returnCallback, placeholder.material, placeholder )">
+    
+                <div class="materialDragIcon "></div>
+    
+            </div>
+        </div><!-- end ngRepeat: placeholder in getMaterialPlaceholders() --><div class="materialPlaceholder ng-scope" ng-repeat="placeholder in getMaterialPlaceholders()" ng-style="getMaterialPlaceholderStyle( placeholder )" material-placeholder-index="1" style="top: 413.745px; left: 537.341px; width: 77.9732px; height: 77.9732px;">
+    
+    
+            <div class="materialInteractionButton ng-hide" ng-click="onMaterialPlaceholderClick( placeholder )" ng-show="checkIsMaterialInteractionButtonVisible( placeholder )">
+    
+                <div class="interactionButtonIcon"></div>
+                <div class="interactionButtonText ng-binding ng-isolate-scope" translate="BUTTONS.INSPECT">Inspect</div>
+            </div>
+            <div class="materialProxy ng-isolate-scope ui-draggable ui-draggable-handle isDisabled" ng-class="{
+                     isDisabled: isPlaceholderProxyDisabled( placeholder ),
+                     isDragging: placeholder === dragPlaceholder,
+                 }" material-placeholder-index="1" utils-drag="onMaterialPlaceholderDrag( eventType, pos, returnCallback, placeholder.material, placeholder )">
+    
+                <div class="materialDragIcon "></div>
+    
+            </div>
+        </div><!-- end ngRepeat: placeholder in getMaterialPlaceholders() -->
+    
+        <bottom-panel class="ng-scope"><div class="bottomPanel" style="width: 877.2px; height: 146.2px;">
+    
+        <div class="background  simple" style="top: 34%; left: 21%; width: 58.78%; height: 38.67%;"></div>
+    
+        <!-- ngRepeat: material in getAllMaterials() --><div class="icon plant plantBackground" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" style="top: 15.33%; left: 25.67%; width: 5.89%; height: 48.67%;"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon solarPanel solarPanelBackground" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" style="top: 19.33%; left: 35.67%; width: 3.56%; height: 49.33%;"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon sunscreen sunscreenBackground ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon eyes eyesBackground ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon glass glassBackground" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" style="top: 18%; left: 44.11%; width: 3.33%; height: 48.67%;"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon aluminumFoil aluminumFoilBackground" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" style="top: 18%; left: 52.11%; width: 4.11%; height: 49.33%;"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon melanin melaninBackground" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" style="top: 14.67%; left: 59.56%; width: 6.22%; height: 49.33%;"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon geneticMaterial geneticMaterialBackground" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" style="top: 14%; left: 70.22%; width: 2.11%; height: 50%;"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon sulfuricAcid sulfuricAcidBackground ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon carbon carbonBackground ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon ozone ozoneBackground ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()"></div><!-- end ngRepeat: material in getAllMaterials() --><div class="icon nitrogen nitrogenBackground ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()"></div><!-- end ngRepeat: material in getAllMaterials() -->
+    
+        <!-- ngRepeat: material in getAllMaterials() --><div class="label plant" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.PLANT" style="top: 74%; left: 28.61%;">Plant</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label solarPanel" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.SOLAR_PANEL" style="top: 74%; left: 37.44%;">Solar Panel</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label sunscreen ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.SUNSCREEN">Sunscreen</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label eyes ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.EYE">Eye</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label glass" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.GLASS" style="top: 74%; left: 45.78%;">Glass</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label aluminumFoil" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.ALUMINUM_FOIL" style="top: 74%; left: 54.17%;">Aluminum Foil</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label melanin" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.MELANIN" style="top: 74%; left: 62.67%;">Melanin</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label geneticMaterial" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.GENETIC_MATERIAL" style="top: 74%; left: 71.28%;">Genetic Material</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label sulfuricAcid ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.SULFURIC_ACID">Sulfuric Acid Droplet</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label carbon ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.CARBON_DIOXIDE">Carbon Dioxide</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label ozone ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.OZONE">Ozone</div><!-- end ngRepeat: material in getAllMaterials() --><div class="label nitrogen ng-hide" ng-show="material.isBottomPanelVisible" ng-repeat="material in getAllMaterials()" translate="MATERIALS.NITROGEN_DIOXIDE">Nitrogen Dioxide</div><!-- end ngRepeat: material in getAllMaterials() -->
+    
+        <div class="touch" ng-style="getProxyStyle()" utils-touch="onProxyTouch( type, event )" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 6%; left: 21.78%; width: 56.11%; height: 94%;">
+        </div>
+    
+    </div>
+    
+    <div class="bottomPanelDrag  ng-hide" ng-show="checkIsDragging()" ng-style="getDragIconStyle()"></div>
+    </bottom-panel>
+    
+        <!-- ngRepeat: desc in getLightRayDescriptions() -->
+    
+        <material-interactions class="ng-scope"><div class="fullScreenGray" ng-class="{ active: materialInteractions.isActive }" ng-click="closeMaterialInteractionsPopup()"></div>
+    
+    <div class="focusRect" style="top: 0px; left: 13px; width: 998px; height: 654px;">
+        <div class="materialInteractionsContainer ng-hide" ng-click="closeMaterialInteractionsPopup()" ng-show="materialInteractions.isActive">
+    
+            <div class="closeButton"></div>
+    
+            <div class="materialInteractionsHeader">
+                <span translate="EMPTY_STRING" class="ng-binding ng-isolate-scope">EMPTY_STRING</span>
+                <span translate="INTERACTIONS.EFFECTS" class="ng-binding ng-isolate-scope">Effects</span>
+            </div>
+    
+            <div class="interactions ng-hide" ng-show="checkHasMaterialInteractions()">
+    
+                <div class="beforeAfterInteractionsHeader">
+                    <div class="beforeLabel ng-binding ng-isolate-scope" translate="INTERACTIONS.BEFORE">Before</div>
+                    <div class="afterLabel ng-binding ng-isolate-scope" translate="INTERACTIONS.AFTER">After</div>
+                </div>
+    
+                <!-- ngRepeat: interaction in materialInteractions.materialInteractions track by $index -->
+    
+            </div>
+    
+            <div class="noInteractionContainer" ng-show="! checkHasMaterialInteractions()">
+    
+                <div class="imageBox">
+                    <div class="image" ng-class="materialInteractions.placeholder.material.id"></div>
+                </div>
+    
+                <div class="interactionName ng-binding ng-isolate-scope" translate="INTERACTIONS.NO_CHANGE">No Change</div>
+    
+            </div>
+    
+        </div>
+    </div>
+    </material-interactions>
+    
+        <div class="topBar">
+            <div class="toggles">
+                <div class="toggleLightRays">
+                    <div class="label ng-binding ng-isolate-scope" translate="BUTTONS.SHOW_BEAM">Show Beam</div>
+                    <div class="image isOn" ng-class="{ isOn: checkBeamsVisible() }" ng-click="toggleBeams()"></div>
+                </div>
+        
+                <div class="togglePhotons">
+                    <div class="label ng-binding ng-isolate-scope" translate="BUTTONS.SHOW_ENERGY">Show Energy</div>
+                    <div class="image" ng-class="{ isOn: checkPhotonsVisible() }" ng-click="togglePhotons()"></div>
+                </div>
+            </div>
+    
+            <div class="resetButton" ng-click="rebuildWithConfirmation()"></div>
+            <div class="helpButton" ng-click="onHelpButtonClick( $event )"></div>
+    
+            <help-view ng-show="! isSimStarted() || areLightRaysVisible()" class=""></help-view>
+        </div>
+    
+        <div class="beamTooltip ng-hide" ng-show="checkBeamTooltipVisible()" style="top: 414px; left: 445px;">
+            <div class="text ng-binding ng-isolate-scope" translate="TOOLTIPS.TAP_TO_INSPECT_LIGHT">Tap on beams to inspect the light</div>
+            <div class="caret"></div>
+        </div>
+    
+        <div class="placeholderTooltip" ng-show="checkPlaceholderTooltipVisible()" style="top: 414px; left: 537px;">
+            <div class="text ng-binding ng-isolate-scope" translate="TOOLTIPS.DRAG_ONTO_THE_PLATFORMS">Drag materials onto the platforms in the testing area</div>
+            <div class="caret"></div>
+        </div>
+    
+    </div>
+    </interactions-view>
+                    <div class="customViewContainer ng-hide" ng-show="currentView === 'customView'">
+    
+        <div class="customViewLabel" style="top: 68px; left: 117px;">
+            <div class="icon"></div>
+            <div class="text ng-binding ng-isolate-scope" translate="CUSTOM.CUSTOM_WAVE">Custom Wave</div>
+        </div>
+    
+        <canvas id="customWaveCanvasBackground" width="972" height="317" style="left: 26px; top: 130px; width: 972px; height: 317px;"></canvas>
+        <canvas id="customWaveCanvas" width="972" height="317" style="left: 26px; top: 130px; width: 972px; height: 317px;"></canvas>
+    
+        <div class="amplitudeLabelContainer" style="top: 245px; left: 17px;">
+            <div class="amplitudeLabel ng-binding ng-isolate-scope" translate="CUSTOM.AMPLITUDE">Amplitude</div>
+            <div class="amplitudeValue ng-binding"> 3</div>
+        </div>
+    
+        <div class="wavelengthLabelContainer" style="top: 93px; left: 442px;">
+            <div class="wavelengthLabel ng-binding ng-isolate-scope" translate="CUSTOM.WAVELENGTH">Wavelength</div>
+            <div class="wavelengthValue ng-binding">
+                1 x 10 <sup class="ng-binding">-14</sup>
+                <span translate="CUSTOM.METERS" class="ng-binding ng-isolate-scope">meters</span>
+            </div>
+        </div>
+    
+        <div class="referenceObjectContainer" style="left: 371px; top: 361.883px;">
+            <div class="referenceObjectLabel ng-binding ng-isolate-scope" translate="CUSTOM.ONE_WAVELENGTH_SIMILAR_SIZE">ONE WAVELENGTH IS SIMILAR IN SIZE TO</div>
+            <div class="referenceObject">
+                <div class="referenceObjectImage gamma" ng-class="getTypeOfLightNameClass()"></div>
+                <div class="referenceObjectName ng-binding ng-isolate-scope" translate="CUSTOM.ATOMIC_NUCLEUS">An atomic nucleus</div>
+            </div>
+        </div>
+    
+        <div class="infoPanel" style="top: 425px; width: 788px;">
+    
+            <div class="infoPanelContainer typeOfLight">
+                <div class="label ng-binding ng-isolate-scope" translate="CUSTOM.TYPE_OF_LIGHT">Type of light</div>
+                <div class="name ng-binding ng-isolate-scope gamma" ng-class="getTypeOfLightNameClass()" translate="SOURCES.GAMMA_RAY">Gamma Ray</div>
+            </div>
+    
+            <div class="infoPanelContainer wavelengthContainer">
+                <div class="label ng-binding ng-isolate-scope" translate="CUSTOM.WAVELENGTH_METERS">WAVELENGTH (meters)</div>
+                <div class="wavelength ng-binding">1 x 10 <sup class="ng-binding">-14</sup>  = 0.00000000000001</div>
+            </div>
+    
+            <div class="infoPanelContainer frequencyContainer">
+                <div class="label ng-binding ng-isolate-scope" translate="CUSTOM.FREQUENCY_THZ">FREQUENCY (THz)</div>
+                <div class="frequency ng-binding">3 x 10  <sup class="ng-binding"> 10 </sup>  = 30000000000
+                </div>
+            </div>
+    
+            <div class="infoPanelContainer intensityContainer">
+                <div class="label ng-binding ng-isolate-scope" translate="CUSTOM.INTENSITY">INTENSITY</div>
+                <div class="intensity ng-binding ng-isolate-scope" translate="INTENSITY.HIGH">High</div>
+            </div>
+        </div>
+    
+        <div class="touchDiv" utils-touch="onTouch( type, event )" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+    
+        <div class="buttons" style="top: 551px; right: 119px;">
+            <div class="cancelButton ng-binding ng-isolate-scope" ng-click="onCancelButtonClick()" translate="CUSTOM.CANCEL">Cancel</div>
+            <div class="confirmButton ng-binding ng-isolate-scope" ng-click="onConfirmationButtonClick()" translate="CUSTOM.CONFIRM">Confirm</div>
+        </div>
+    </div>
+    
+                    <div id="topBar">
+    
+        <div class="topBarButton levelButton" ng-click="onLevelButtonClicked()">
+        </div>
+    </div>
+                    <div id="levelMenu">
+    
+        <div class="fullScreenGray" ng-class="{ active: levelMenu.isActive }" ng-click="onFullScreenGrayClicked()"></div>
+    
+        <div class="panel" ng-class="{ active: levelMenu.isActive }">
+    
+            <div class="title ng-binding ng-isolate-scope" translate="TITLE">Light Waves</div>
+            <div class="backButton" ng-click="onBackButtonClicked()">
+                <div class="icon fittedBackground"></div>
+            </div>
+    
+            <div class="categories-container">
+                <div class="categories">
+                    <div class="category">
+                        <!-- ngRepeat: level in levelsById --><div class="levelMenuButton unselectable ng-binding ng-scope ng-isolate-scope disabled" ng-repeat="level in levelsById" ng-class="{disabled: isLevelSelected(level.id)}" ng-click="onLevelItemClicked( level, level.id )" translate="LEVELS.SIMPLE">Simple</div><!-- end ngRepeat: level in levelsById --><div class="levelMenuButton unselectable ng-binding ng-scope ng-isolate-scope" ng-repeat="level in levelsById" ng-class="{disabled: isLevelSelected(level.id)}" ng-click="onLevelItemClicked( level, level.id )" translate="LEVELS.COMPLEX">Complex</div><!-- end ngRepeat: level in levelsById -->
+                    </div>
+                    <div class="category">
+                        <div class="category-name ng-binding ng-isolate-scope" translate="SIDE_MENU.OTHER">Other</div>
+    
+                        <div class="levelMenuButton unselectable ng-binding ng-isolate-scope" ng-click="onSignOutClicked()" translate="SIDE_MENU.LOG_OUT">Log Out</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="credits" class="credits">
+                <div class="contained">
+    
+                    <div id="copyright" translate="SIDE_MENU.COPYRIGHT" translate-values="{ year: year }" class="ng-binding ng-isolate-scope">© The Regents of the University of California. All rights reserved.</div>
+    
+                    <div id="terms">
+                        <span translate="SIDE_MENU.USE_OF_APP" class="ng-binding ng-isolate-scope">Use of the app is subject to Amplify’s</span>
+                        <a href="http://www.amplify.com/user-terms" target="_blank" translate="SIDE_MENU.TERMS_OF_USE" class="ng-binding ng-isolate-scope">Terms of Use</a>
+                        <span translate="SIDE_MENU.AND" class="ng-binding ng-isolate-scope">and</span>
+                        <a href="http://www.amplify.com/customer-privacy" target="_blank" translate="SIDE_MENU.PRIVACY_POLICY" class="ng-binding ng-isolate-scope">Privacy Policy</a>.
+                    </div>
+    
+                    <!-- ngIf: showCredits() -->
+    
+                </div>
+    
+                <div class="version ng-binding">
+                    <span translate="SIDE_MENU.VERSION" class="ng-binding ng-isolate-scope">v</span> 1.1.0
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
+                    <div id="confirmationPopup">
+    
+        <div class="fullScreenGray" ng-class="{ active: confirmationPopup.isActive }" ng-click="close()"></div>
+    
+        <div class="panel ng-hide" ng-show="confirmationPopup.isActive">
+    
+            <div class="popupPrompt ng-binding">This clears and resets the grid to its default state. Are you sure you wish to proceed ?</div>
+    
+            <div class="okButton" ng-click="onOkButtonClicked()">
+                <span class="label ng-binding ng-isolate-scope" translate="CONFIRMATION.YES">YES</span>
+            </div>
+    
+            <div class="noButton" ng-click="close()">
+                <span class="label ng-binding ng-isolate-scope" translate="CONFIRMATION.NO">NO</span>
+            </div>
+        </div>
+    
+    </div>
+    
+                    <div class="developButton button1 debug ng-binding" ng-click="onDebugButtonClick()">
+                        Debug is ON
+                    </div>
+    
+                    <div class="developButton button2 set1" ng-click="onSet1ButtonClick()">
+                        Set Test Case
+                    </div>
+    
+                    <div class="developButton button3 spec" ng-click="onResizeButtonClick()">
+                        Resize
+                    </div>
+    
+                    <div class="developButton button4 spec" ng-click="onSpecButtonClick()">
+                        Spec Overlay
+                    </div>
+    
+                    <div class="developButton button5 aa ng-binding" ng-click="onAAButtonClick()">
+                        AA ON
+                    </div>
+    
+                    <div class="developButton button6 ng-binding" ng-click="onStrokeKnobRadiusClick()">
+                        Stroke Knob Radius OFF
+                    </div>
+    
+                    <div class="specOverlay ng-hide" ng-show="isSpecOverlayShown" ng-click="onSpecClick()">
+                    </div>
+                    
+                    <!-- ngIf: showLanguageToggle --><div class="language-toggle-container ng-scope" ng-if="showLanguageToggle">
+                        <label aria-live="assertive" id="aria-language-toggle">Language Toggle Button</label>
+                        <div class="language-toggle-wrapper ng-isolate-scope" user-business-key="5bc634f8-e7e7-40a0-a7fd-660ebc419c86" class-ids="[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;]" default-language="EN" aria-label-id="aria-language-toggle" languages="EN, ES" is-user-read-only="isUserReadOnly"><amp-ui-language-toggle initial-data-props="{&quot;id&quot;:&quot;language-toggle&quot;,&quot;languages&quot;:&quot;EN, ES&quot;,&quot;ariaLabelId&quot;:&quot;aria-language-toggle&quot;,&quot;defaultLanguage&quot;:&quot;EN&quot;,&quot;classIds&quot;:[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;],&quot;isAppOnline&quot;:true,&quot;toggleType&quot;:&quot;teacher-toggle&quot;,&quot;isUserReadOnly&quot;:false,&quot;userBusinessKey&quot;:&quot;5bc634f8-e7e7-40a0-a7fd-660ebc419c86&quot;}" <="" amp-ui-language-toggle=""></amp-ui-language-toggle></div>
+                    </div><!-- end ngIf: showLanguageToggle -->
+                </div><!-- end ngIf: areAllImagesLoaded() -->
+    
+            </div>
+        
+    
+    <iframe src="https://my.amplify.com/auth/realms/Amplify/protocol/openid-connect/login-status-iframe.html" title="keycloak-session-iframe" style="display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

@@ -1,0 +1,35 @@
++ Addition x + y
+- Subtraction x - y
+* Multiplication x * y
+/ Division x / y
+% Modulus x % y
+** Eponentation x ** y
+// Floor division x // y
+
+
+Others:
+=
++=
+-=
+*=
+/=
+%=
+//=
+**=
+&=
+|=
+^=
+>>=
+<<=
+!=
+==
+<
+>
+>=
+<=
+&
+|
+^
+~
+>>
+<<

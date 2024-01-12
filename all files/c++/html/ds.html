@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <title>This is crazy</title>
+        <h1>This is my first time in html</h1>
+        <p>Idk what I am doing</p>
+        <h2 style="background-color: rgb(23, 247, 15)">I'm trying out things</h2>
+        <p id="demo">Please visit Microsoft</p>
+        <p id="demo2">please close the page</p>
+        <p id="demo3">press to capitalize</p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+    </body>
+    <script>
+        <button onclick="myFunction()">try it</button>
+        function myFunction() {
+            let text = document.getElementById("demo").innerHTML;
+            document.getElementById("demo").innerHTML =
+            text.replace("Microsoft","W3Schools");
+        }
+    </script>
+    <script>
+        <button onclick="myFunction2()">try it</button>
+        function myFunction2() {
+            let text = document.getElementById("demo2").innerHTML;
+            document.getElementById("demo2").innerHTML =
+            text.replace("page", "window");
+        }
+    </script>
+    <script>
+        <button onclick="myFunction3()">press to capitalize</button>
+        function myFunction3() {
+            let text = document.getElementById("demo3").innerHTML;
+            document.getElementById("demo").innerHTML =
+            text.toUpperCase();
+        }
+    </script>
+    <script>
+        let text1 = "Hello";
+        let text2 = "World!";
+        let text3 = text1.concat(" ", text2);
+        document.getElementById("demo4").innerHTML = text3;
+    </script>
+    <script>
+        let text4 = "5";
+        document.getElementById("demo5").innerHTML = text.padStart(4, "0");
+    </script>
+    <script>
+        let text5 = "Please do not use this browser";
+        let index = text.indexOf("do");
+        document.getElementById("demo6").innerHTML = index;
+    </script>
+    <script>
+        let firstName = "Aiden";
+        let lastName = "Hesser";
+        let text6 = 'Welcome ${firstName}, ${lastName}!';
+        document.getElementById("demo7").innerHTML = text6;
+    </script>
+    <script>
+        let price = 10;
+        let VAT = 0.25;
+        let total = 'Total: ${(price * (1 + VAT)).toFixed(2)}';
+        document.getElementById("demo8").innerHTML = total;
+    </script>
+    <script>
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+        let html = `<h2>${header}</h2><ul>`;
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+        html += `</ul>`;
+        document.getElementById("demo").innerHTML = html;
+    </script>
+</html>

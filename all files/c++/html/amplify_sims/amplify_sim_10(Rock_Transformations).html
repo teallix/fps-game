@@ -1,0 +1,133 @@
+<html ng-app="rockTransformations" class="ng-scope" lang="en"><head><style>body {transition: opacity ease-in 0.2s; } 
+    body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+    </style><style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+        <meta charset="utf-8"><!--removed @charset "UTF-8"; from "text/css> and [ng\:cloak]"-->
+        <title ng-bind="title" class="ng-binding">Rock Transformations</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+    
+        <!-- Disallow zooming. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+        <!-- Allow the app to be added to the home screen on iOS devices. -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+        
+    
+        <link rel="stylesheet" href="css/all.css?t=1652451834544">
+    
+        <!-- auto incremented during the build step -->
+        <meta name="version" content="1.1.0">
+    </head>
+    <!--body ng-controller="ampAuthorizationController"-->
+    <body ng-controller="ampAuthorizationController" ng-init="entitlementKey = '1C297527-3B2D-44C2-ACBA-FF1076A3F415'; checkLanguageAccess = ['spanish'];" class="ng-scope" data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="">
+        <script type="text/javascript" src="https://my.amplify.com/auth/js/keycloak.min.js"></script><script src="js/body.js?t=1652451834544"></script>
+    
+        <script src="bower_components/amp-language-toggle/dist/dependencies.min.js?t=1652451834544"></script>
+        <script src="bower_components/amp-language-toggle/dist/amp-language-toggle-es5.min.js?t=1652451834544"></script>
+    
+        <div ng-controller="MainCtrl" class="simPage language-EN">
+            <div id="mainContainer" ng-transclude="" class="ng-scope">
+                <div id="canvas-container" class="ng-scope">
+                    
+                    <canvas controller="SimCtrl" id="sim" state="simState" class="ng-isolate-scope" width="811" height="651" style="user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); max-width: 1028px;"></canvas>
+                    
+                  
+            
+                    <div id="level-select-container" style="max-width: 1028px; overflow: hidden;">
+    
+                        <!-- ngIf: showSpanishToggle --><div class="language-toggle-container ng-scope" ng-if="showSpanishToggle">
+                            <label aria-live="assertive" id="aria-language-toggle">Language Toggle Button</label>
+                            <div class="language-toggle-wrapper ng-isolate-scope" user-business-key="5bc634f8-e7e7-40a0-a7fd-660ebc419c86" class-ids="[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;]" default-language="EN" is-user-read-only="isUserReadOnly" aria-label-id="aria-language-toggle" languages="EN, ES"><amp-ui-language-toggle initial-data-props="{&quot;id&quot;:&quot;language-toggle&quot;,&quot;languages&quot;:&quot;EN, ES&quot;,&quot;ariaLabelId&quot;:&quot;aria-language-toggle&quot;,&quot;defaultLanguage&quot;:&quot;EN&quot;,&quot;classIds&quot;:[&quot;299dd487-3e8c-4f21-9e4c-7de9f3cc2b70&quot;,&quot;38d108e1-4fec-4ecc-b614-dbccf7c2f3e2&quot;,&quot;fb46be6f-d7c0-421e-921c-b5111d1bad60&quot;,&quot;af5cbfb6-2f76-4b4a-b0a0-953df22fca2b&quot;,&quot;1567b3b7-5fca-49c6-a1cd-406c10c7fc16&quot;,&quot;a1874c37-e3b2-4dd5-b616-feb86c2caf9e&quot;,&quot;d9d27c51-9874-4782-942a-0b2b6e48971f&quot;,&quot;3aa0c5a6-7595-40c7-bb9a-cd3811d6dc7f&quot;,&quot;9f7b5450-b446-435d-ae75-3889d2e7ff10&quot;],&quot;isAppOnline&quot;:true,&quot;toggleType&quot;:&quot;teacher-toggle&quot;,&quot;isUserReadOnly&quot;:false,&quot;userBusinessKey&quot;:&quot;5bc634f8-e7e7-40a0-a7fd-660ebc419c86&quot;}" <="" amp-ui-language-toggle=""></amp-ui-language-toggle></div>
+                        </div><!-- end ngIf: showSpanishToggle -->
+    
+    
+                        <div id="topControlBar" ng-show="simState.simMode!=MODE_LOADING" class="ng-scope"><div class="topbarCenterContainer" ng-transclude="">
+    
+                        <!-- <div class="processLevelTopBar" ng-show="simState.levelID == LEVEL_PROCESS">-->
+                        <div ng-show="simState.levelID == LEVEL_PROCESS" class="ng-scope">
+    
+                            <button class="topbarButton analyze processLevel" ng-class="{analyzeDisabled : !simState.enableTopBarControls || !simState.enableAnalyzeButton || simState.levelSelectMenuShowing, analyzeOnState : simState.isAnalyzeMode == true }" ng-click="pressAnalyze()">
+                                <div class="analyzeIcon" ng-class="{onState: simState.isAnalyzeMode == true}"></div>
+                                <div class="analyzeLabel ng-binding ng-isolate-scope" ng-show="simState.isAnalyzeMode == false" translate="ANALYZE_ROCKS">ANALYZE ROCKS</div>
+                                <div class="analyzeLabel ng-binding ng-isolate-scope ng-hide" ng-show="simState.isAnalyzeMode == true" translate="DONE_ANALYZING">DONE ANALYZING</div>
+                            </button>
+    
+                            <button class="topbarButton undo undoDisabled" ng-class="{undoDisabled : !simState.enableTopBarControls || simState.canUndo == false || simState.isAnalyzeMode == true || simState.levelSelectMenuShowing}" ng-click="pressUndo()">
+                                <div class="undoLabel ng-binding ng-isolate-scope" translate="UNDO">UNDO</div>
+                            </button>
+                        
+                            <button class="topbarButton reset processLevel" ng-class="{resetDisabled : !simState.enableTopBarControls || simState.levelSelectMenuShowing}" ng-click="pressReset()">
+                                <div class="resetLabel ng-binding ng-isolate-scope" translate="RESET">RESET</div>
+                            </button>
+    
+                        </div>
+                       
+    
+                        <!-- <div class="energyLevelTopBar" ng-show="simState.levelID == LEVEL_ENERGY"> -->
+                        <div ng-show="simState.levelID == LEVEL_ENERGY" class="ng-scope ng-hide">
+                            <div class="rightDock">
+                            <button class="topbarButton analyze energyLevel" ng-class="{analyzeDisabled : !simState.enableTopBarControls || !simState.enableAnalyzeButton || simState.levelSelectMenuShowing, analyzeOnState : simState.isAnalyzeMode == true }" ng-click="pressAnalyze()">
+                                <div class="analyzeIcon" ng-class="{onState: simState.isAnalyzeMode == true}"></div>
+                                <div class="analyzeLabel ng-binding ng-isolate-scope" ng-show="simState.isAnalyzeMode == false" translate="ANALYZE_ROCKS">ANALYZE ROCKS</div>
+                                <div class="analyzeLabel ng-binding ng-isolate-scope ng-hide" ng-show="simState.isAnalyzeMode == true" translate="DONE_ANALYZING">DONE ANALYZING</div>
+                            </button>
+    
+                            <button class="topbarButton play" ng-class="{playDisabled : !simState.enableTopBarControls || simState.isAnalyzeMode == true || simState.levelSelectMenuShowing}" ng-show="!simState.isPlaying" ng-click="togglePlayPauseSim()">
+                            </button>
+                            <!-- <button class="topbarButton playDisabled" ng-show="!simState.isPlaying && simState.levelID == LEVEL_ENERGY && simState.isAnalyzeMode == true"></button> -->
+                           
+                            <button class="topbarButton pause ng-hide" ng-class="{pauseDisabled : !simState.enableTopBarControls || simState.isAnalyzeMode == true || simState.levelSelectMenuShowing}" ng-show="simState.isPlaying" ng-click="togglePlayPauseSim()">
+                            </button>
+                            <!-- <button class="topbarButton pauseDisabled" ng-show="simState.isPlaying && simState.levelID == LEVEL_ENERGY && simState.isAnalyzeMode == true"></button> -->
+    
+    
+    
+                            <button id="speedButton" class="topbarButton speedButton ng-binding" ng-class="{speedDisabled : !simState.enableTopBarControls || simState.isAnalyzeMode == true || simState.levelSelectMenuShowing}" ng-click="toggleShowSpeedDropdown()">
+                                <span class="simSpeedText label"></span>x1
+                                <div class="arrow" ng-show="!simState.showSpeedDropdown">
+                            </div></button>
+                            <div class="speedButtonContainer ng-hide" ng-show="simState.showSpeedDropdown">
+                                <!-- ngRepeat: speed in simState.simSpeeds --><button class="topbarButton speedDropdownButton ng-binding ng-scope" ng-class="{selected: speed.selected}" ng-click="selectSpeed(speed)" ng-repeat="speed in simState.simSpeeds"><span class="simSpeedText"></span>x0.5</button><!-- end ngRepeat: speed in simState.simSpeeds --><button class="topbarButton speedDropdownButton ng-binding ng-scope" ng-class="{selected: speed.selected}" ng-click="selectSpeed(speed)" ng-repeat="speed in simState.simSpeeds"><span class="simSpeedText"></span>x1</button><!-- end ngRepeat: speed in simState.simSpeeds --><button class="topbarButton speedDropdownButton ng-binding ng-scope" ng-class="{selected: speed.selected}" ng-click="selectSpeed(speed)" ng-repeat="speed in simState.simSpeeds"><span class="simSpeedText"></span>x2</button><!-- end ngRepeat: speed in simState.simSpeeds -->
+                            </div>
+    
+    
+    
+                            <button class="topbarButton reset" ng-class="{resetDisabled : !simState.enableTopBarControls || simState.levelSelectMenuShowing}" ng-click="pressReset()">
+                                <div class="resetLabel ng-binding ng-isolate-scope" translate="RESET">RESET</div>
+                            </button>
+                        </div>
+                        </div>
+    
+                    </div></div>
+                        
+                        <div class="levelSelectDirective ng-isolate-scope" level-header="getLevelHeader()" credit-file-location="jsons\credits.json" level-panel-is-open="levelSelectPanelVisibilityChanged(isOpen)" categories="categories" level-selected="levelSelected(level)" confirmation-postfix="?" is-app-online="true"><button class="topbarButton levelSelect" ng-click="setLevelPanelVisible(!showLevelPanel)"></button><div class="fullScreenGrey ng-hide" ng-show="showLevelPanel" ng-click="setLevelPanelVisible(false)"></div><div id="levelPanel" class="sideControlPanel animateLevelPanel levelPanelHide" ng-class="{levelPanelHide: !showLevelPanel}"><div class="levelSelectHeader ng-binding upperCaseHeader" ng-class="{'upperCaseHeader': !removeHeaderUpperCasing}">Rock Transformations</div><button class="topbarLevelCloseButton" ng-click="setLevelPanelVisible(false)"></button><div class="categories-container"><div class="categories"><!-- ngRepeat: cat in categories --><div class="category ng-scope" ng-repeat="cat in categories"><div class="category-name ng-binding">Modes</div><div class="levels"><!-- ngRepeat: lev in cat.levels | filter: {show: true} --><div class="level ng-scope" ng-repeat="lev in cat.levels | filter: {show: true}"><button class="level-name ng-scope ng-binding selected" element-mouse-hover="" ng-class="{selected: lev.selected}" ng-click="selectLevel(lev, $event)">Process Mode</button></div><!-- end ngRepeat: lev in cat.levels | filter: {show: true} --><div class="level ng-scope" ng-repeat="lev in cat.levels | filter: {show: true}"><button class="level-name ng-scope ng-binding" element-mouse-hover="" ng-class="{selected: lev.selected}" ng-click="selectLevel(lev, $event)">Energy Mode</button></div><!-- end ngRepeat: lev in cat.levels | filter: {show: true} --></div></div><!-- end ngRepeat: cat in categories --><div class="category"><div class="category-name ng-binding" ng-hide="hideOthers">Other</div><!-- ngRepeat: link in links --><!-- ngIf: isAppOnline --><div class="levels ng-scope" ng-if="isAppOnline"><button class="logout-button ng-binding" ng-click="logoutSelected()">Log Out</button></div><!-- end ngIf: isAppOnline --></div></div></div><!-- ngIf: showHorizontalBarAboveCredits --><div id="credits" class="credits"><div class="contained"><div id="copyright" class="ng-binding">© The Regents of the University of California. All rights reserved.</div><div id="terms" ng-bind-html="renderHtmlDescription('TERMS')" class="ng-binding">Use of the app is subject to Amplify’s <a href="http://www.amplify.com/user-terms" target="_blank">Terms of Use</a> and <a href="http://www.amplify.com/customer-privacy" target="_blank">Privacy Policy</a>.</div><!-- ngIf: showCredits() --><div class="credit ng-binding ng-scope" ng-click="aboutSelected()" ng-if="showCredits()">Credits</div><!-- end ngIf: showCredits() --></div><div class="version ng-binding">v 1.1.0</div></div></div><div ng-show="isVisible" class="creditsPanelDirective ng-isolate-scope ng-hide" credits="credits"><div class="creditsBackground"><p class="amplify">Amplify.</p><span class="close-icon" ng-click="close()"></span><div class="creditsSection"><div id="creditsPanel" class="creditsPanel allow-scroll-on-mobile"><!-- ngRepeat: credit in credits --><div ng-repeat="credit in credits" class="ng-scope"><h4 id="amplifyCredits_1" class="creditSectionHeader ng-binding"></h4><p class="creditSectionText ng-binding">(granite, rhyolite, gabbro, basalt, amphibolite, gneiss, schist, sandstone, olivine) Imperial College Rock Library</p></div><!-- end ngRepeat: credit in credits --><div ng-repeat="credit in credits" class="ng-scope"><h4 id="amplifyCredits_2" class="creditSectionHeader ng-binding"></h4><p class="creditSectionText ng-binding">(sediment, magma) Shutterstock</p></div><!-- end ngRepeat: credit in credits --></div></div></div></div></div>
+                       
+                        <!--
+                        <div class="loadingBG" ng-show="simState.simMode==MODE_LOADING">
+                            <pro-canvas controller="LoadingController" id="loading" state="simState"></pro-canvas>
+                        </div>  
+                        -->
+    
+                         <div class="loading ng-isolate-scope ng-hide" ng-show="show" show="!simState.loadingDone"><div class="loadingContainer"><label class="ampliftyText">Amplify.</label><div class="spinner"></div></div></div>
+    
+                    </div>
+    
+                   
+                </div>
+                 
+                <div id="contentContainer" ng-transclude="" class="ng-scope"></div>
+    
+                <science-about-panel version="v 1.1.0" class="ng-scope"></science-about-panel>
+    
+                <!-- ////TODO: Un-comment this to show the side bar
+                <science-sidepanel is-open="sidePanelIsOpen">
+                    TODO: side panel UI goes here
+                </science-sidepanel>
+                //// -->
+    
+            </div>
+        </div>
+    
+    
+    <iframe src="https://my.amplify.com/auth/realms/Amplify/protocol/openid-connect/login-status-iframe.html" title="keycloak-session-iframe" style="display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

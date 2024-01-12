@@ -1,0 +1,37 @@
+//For Nex-AC v1.0 (0.3.7-R1)
+
+#if defined _nex_ac_lang_included
+	#endinput
+#endif
+#define _nex_ac_lang_included
+
+new
+	SUSPICION_1[] =			"[Nex-AC] Cïðàöî¢âàííå íà %d ID. Êîä ïðû÷ûíû: %03d%s",
+	SUSPICION_2[] =			"[Nex-AC] Cïðàöî¢âàííå íà IP %s. Êîä ïðû÷ûíû: %03d%s",
+	VERSION_WARNING[] =		"[Nex-AC] Äàäçåíàÿ âåðñ³ÿ àíöi÷ûòà íå ïàäûõîäç³öü äëÿ âåðñ³³ ñåðâåðà",
+	CFG_OPENING_ERROR[] =	"[Nex-AC] Ïàìûëêà ñòâàðýííÿ/àäêðûööÿ %s!",
+
+#if defined DEBUG
+	DEBUG_CODE_1[] =		"[Nex-AC debug] ID %d ïåðàâûñ³¢ %d ñïðîáà¢ ôëóäà. Public ID: %d",
+	DEBUG_CODE_2[] =		"[Nex-AC debug] Íÿïðàâ³ëüíàÿ âåðñ³ÿ ¢ %d ID. Âåðñiÿ: %s",
+	DEBUG_CODE_3[] =		"[Nex-AC debug] ID %d ïåðàâûñ³¢ %d ïàäêëþ÷ýííÿ¢ ç 1 IP-àäðàñà",
+	DEBUG_CODE_4[] =		"[Nex-AC debug] Íÿ¢äàëû ¢âàõîä ó RCON ç IP %s âûêàðûñòî¢âàþ÷û ïàðîëü %s",
+	DEBUG_CODE_5[] =		"[Nex-AC debug] ID %d âûêàðûñòà¢ NOP %s",
+#endif
+
+	KICK_MSG[] =			"Âû áûë³ ê³êíóòû ïà ïàäàçðýíí³ ¢ âûêàðûñòàíí³ ÷ûöü-ïðàãðàì (#%03d)",
+	MAX_CONNECTS_MSG[] =	"Âû ïåðàâûñ³ë³ ìàêñ³ìàëüíû ë³ê ïàäêëþ÷ýííÿ¢ ç 1 IP-àäðàñà",
+	UNKNOWN_CLIENT_MSG[] =	"Äàäçåíàÿ âåðñ³ÿ êëiåíòà íå ïàäûõîäç³öü äëÿ ãóëüí³ íà ñåðâåðû",
+
+	LOADED_MSG_1[] =		" Àíöi÷ûò Nex-AC çàãðóæàíû!",
+	LOADED_MSG_2[] =		" Âåðñiÿ àíöi÷ûòà: %s",
+	LOADED_MSG_3[] =		" À¢òàð: Nexius",
+
+	STATS_STRING_1[] =		" Ñòàòûñòûêà àíöi÷ûòà Nex-AC",
+	STATS_STRING_2[] =		" Âûÿ¢ëåíà ³ ïàïÿðýäæàíà:",
+	STATS_STRING_3[] =		"  %d ñïðîáà¢ ÷ûöåðñòâà",
+	STATS_STRING_4[] =		"  %d ñïðîáà¢ óçëîìó",
+	STATS_STRING_5[] =		"  %d ñïðîáà¢ êðàøà",
+	STATS_STRING_6[] =		"  %d ñïðîáà¢ ôëóäà",
+	STATS_STRING_7[] =		"  %d íàïàäà¢",
+	STATS_STRING_8[] =		" Óñÿãî âûÿ¢ëåíà ³ ïàêàðàíà %d ÷ûöåðà¢";

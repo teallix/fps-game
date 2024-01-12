@@ -1,0 +1,61 @@
+fileFormatVersion: 2
+guid: 2111a9232098b091822134e13414
+labels:
+- counter
+- fps
+- textures
+- materials
+- memory
+- monitor
+- manager
+- server
+- list
+- animations
+- animator
+- ram
+- shader
+- editor
+- font
+- style
+- ui
+- gui
+- prefab
+- package
+- assets
+- characters
+- tps
+- character models
+- weapons
+- ai
+- graph
+- runtime
+- time
+- login
+- logout
+- log
+- edit
+- profile
+- text
+- storage
+- body
+- generation
+- frames
+- frames per second
+- updates
+- mods
+- scripts
+- graph tables
+- tools
+- deps
+- src
+- data
+- tps alpha
+- tps beta
+- fps alpha
+- fps beta
+timeCreated: 103829303
+licenseType: Free
+NativeFormatImporter:
+  userData: 
+  assestBundleName: 
+  assetBundleVariant: 

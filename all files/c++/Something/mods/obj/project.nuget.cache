@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "9/UyIYtDou97F6oq0zjD/jMlDo8kY+ne6YAcMEw/eGz3HX33JiLuZjjMI+NMGJWQMAVqujY0IFKannv+G0yKGw==",
+  "success": true,
+  "projectFilePath": "/workspaces/teal/all files/c++/Something/mods/uploader.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/neon.ssh.net/2.2.0/neon.ssh.net.2.2.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/serilog/2.9.0/serilog.2.9.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/serilog.sinks.console/4.0.0-dev-00839/serilog.sinks.console.4.0.0-dev-00839.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.commandline/2.0.0-beta4.22272.1/system.commandline.2.0.0-beta4.22272.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.commandline.dragonfruit/0.4.0-alpha.22272.1/system.commandline.dragonfruit.0.4.0-alpha.22272.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.commandline.namingconventionbinder/2.0.0-beta4.22272.1/system.commandline.namingconventionbinder.2.0.0-beta4.22272.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.commandline.rendering/0.4.0-alpha.22272.1/system.commandline.rendering.0.4.0-alpha.22272.1.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.host.linux-x64/5.0.17/microsoft.netcore.app.host.linux-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}

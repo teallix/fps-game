@@ -1,0 +1,5 @@
+youtube.library.update({
+    recource: library,
+    part: 'recently watched',
+    auth: auth,
+});
