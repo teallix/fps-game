@@ -9,7 +9,7 @@ def gameStart():
     time.sleep(2.5)
     print("Sunday, February 11th, 1996, 0400")
     time.sleep(2)
-    print("17°51'50'N 77°17'53'W', off the coast of Jamaica") # reminder to change the '' to "" before realease
+    print("17°51'50\"N 77°17'53\"W\", off the coast of Jamaica") # (fixed)reminder to change the '' to "" before realease
     time.sleep(2)
     print("The weather is a cool, windy wet that kind of reminds your of your home back in Shreveport")
     time.sleep(2)
@@ -35,7 +35,8 @@ def goOrNotLandWater():
         wentToWater()
     
     elif enter1 == "back":
-        return
+        time.sleep(0.5)
+        gameStart()
     
     elif enter1 == "no":
         quit()
