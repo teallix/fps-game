@@ -48,7 +48,11 @@ def goOrNotLandWater():
         goOrNotLandWater()
 
 def wentToLand(): # finish
-    return
+    time.sleep(1)
+    print("\"Here I am, the great island of Jamaica, home of the king, Charles III\"")
+    time.sleep(2)
+    print("He has been terrorizing the indigenous peoples of the country lately")
+    time.sleep(2)
 
 def wentToWater(): # finish
     return
