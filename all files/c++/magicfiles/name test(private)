@@ -37,7 +37,7 @@ def timesd():
         time.sleep(3)
         quit()
         
-    elif name == "fagot":
+    elif name == "faggot":
         print("not allowed gay fuck")
         time.sleep(3)
         quit()

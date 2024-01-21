@@ -53,6 +53,8 @@ def wentToLand(): # finish
     time.sleep(2)
     print("He has been terrorizing the indigenous peoples of the country lately")
     time.sleep(2)
+    print("\"And it's your reason to overthrow the monarchy and establish a government.\"")
+    time.sleep(2.5)
 
 def wentToWater(): # finish
     return
