@@ -1,0 +1,1 @@
+print("yes\nno\nyes")

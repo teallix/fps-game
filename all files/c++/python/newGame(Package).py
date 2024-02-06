@@ -1,10 +1,11 @@
+# How to use: install VHS(virtual studio code) and open the file using that, use the play button at top right and select "run python file"
 import time
 # import random
 # unless used will show error
 gender = 'male', 'female'
 race = 'white', 'black', 'asain', 'hispanic', 'middle eastern'
 country_of_origin = 'america', 'china', 'mexico', 'brazil', 'australia', 'saudi arabia'
-laungage = 'english', 'spanish', 'chinese', 'arabic', 'swahili'
+language = 'english', 'spanish', 'chinese', 'arabic', 'swahili'
 hair_style = 'bold cut', 'bald', 'side part', 'bangs', 'pony tail', 'buzz cut', 'fade', 'bob'
 hair_color = 'blond', 'brown', 'black', 'white', 'red', 'orange'
 height = "5\'", "5\'1\"", "5\'2\"", "5\'3\"", "5\'4\"", "5\'5\"", "5\'6\"", "5\'7\"", "5\'8\"", "5\'9\"", "5\'10\"", "5\'11\"", "6\'", "6\'1\"", "6\'2\"", "6\'3\"", "6\'4\"", "6\'5\""
@@ -186,9 +187,110 @@ def makeChar3():
         makeChar3()
         
 def makeChar4():
+    print(language)
+    global language1
+    language1 = input("choose one language to speak\n")
+    
+    if language1 == "english":
+        print("English has been chosen")
+        time.sleep(2)
+        makeChar5()
+        
+    elif language1 == "spanish":
+        print("Spanish has been chosen")
+        time.sleep(2)
+        makeChar5()
+        
+    elif language1 == "chinese":
+        print("Chinese has been chosen")
+        time.sleep(2)
+        makeChar5()
+        
+    elif language1 == "arabic":
+        print("Arabic has been chosen")
+        time.sleep(2)
+        makeChar5()
+        
+    elif language1 == "swahili":
+        print("Swahili has been chosen")
+        time.sleep(2)
+        makeChar5()
+        
+    elif language1 == "no":
+        quit()
+        
+    elif language1 == "back":
+        time.sleep(1)
+        makeChar3()
+        
+    else:
+        print("And... no, just no, don't that again")
+        time.sleep(2)
+        makeChar4()
+        
+def makeChar5():
+    print(hair_style)
+    global hair_style1
+    hair_style1 = input("Now for the hair, choose one style\n")
+    
+    if hair_style1 == "bold cut":
+        print("So you chose the bold cut")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "bald":
+        print("So you chose bald")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "side part":
+        print("So you chose the side part")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "bangs":
+        print("So you chose bangs")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "pony tail":
+        print("So you chose the pony tail")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "buzz cut":
+        print("So you chose the buzz cut")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "fade":
+        print("So you chose the fade")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "bob":
+        print("So you chose the bob")
+        time.sleep(2)
+        makeChar6()
+        
+    elif hair_style1 == "no":
+        quit()
+        
+    elif hair_style1 == "back":
+        time.sleep(1)
+        makeChar4()
+        
+    else:
+        print("What kind of hairstyle is that?")
+        time.sleep(2)
+        makeChar5()
+        
+def makeChar6():
     print(name)
     print(gender1)
     print(race1)
     print(country)
+    print(language1)
+    print(hair_style1)
 
 gameStart()
